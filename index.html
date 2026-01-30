@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manual do Homem de Pelúcia — Assuma as rédeas da sua vida</title>
+  <meta name="description" content="Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô quando a vida pesa.">
+  <meta property="og:title" content="Manual do Homem de Pelúcia — Assuma as rédeas da sua vida">
+  <meta property="og:description" content="Descubra qual dos 4 padrões emocionais masculinos você repete inconscientemente.">
+  <meta property="og:type" content="website">
+  <!-- Troque URL_DA_IMAGEM_DE_PREVIEW pela URL absoluta da imagem (ex: https://seusite.com/preview.jpg). Recomendado: 1200x630px -->
+  <meta property="og:image" content="URL_DA_IMAGEM_DE_PREVIEW">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --accent: #2e7d32;
+      --accent-hover: #1b5e20;
+      --border: #e8e6e3;
+      --card: #ffffff;
+      --arrow: #2e7d32;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* Header / Hero */
+    header {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+
+    .subheadline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .arrow-list {
+      list-style: none;
+    }
+
+    .arrow-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .arrow-list li::before {
+      content: '↳';
+      position: absolute;
+      left: 0;
+      color: var(--arrow);
+      font-weight: 600;
+    }
+
+    .arrow-inline {
+      display: inline;
+    }
+
+    .arrow-inline::before {
+      content: '↳ ';
+      color: var(--arrow);
+      font-weight: 600;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    em {
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Cenários - cards sutis */
+    .cenario {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cenario:last-child {
+      margin-bottom: 0;
+    }
+
+    .cenario blockquote {
+      margin: 1rem 0 0;
+      padding: 0.75rem 0 0;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+      color: var(--text-muted);
+    }
+
+    /* Estágios */
+    .estagio {
+      margin-bottom: 2rem;
+    }
+
+    .estagio:last-child {
+      margin-bottom: 0;
+    }
+
+    .estagio h3 {
+      font-size: 1.1rem;
+      margin-top: 1.75rem;
+    }
+
+    .estagio ul {
+      list-style: none;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .estagio ul li {
+      padding-left: 1.25rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+
+    .estagio ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* Benefícios - grid de listas */
+    .beneficios-categoria {
+      margin-bottom: 1.75rem;
+    }
+
+    .beneficios-categoria:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA Button */
+    .cta-wrapper {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .cta {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: white !important;
+      text-decoration: none;
+      padding: 1rem 2.25rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta:hover {
+      background: var(--accent-hover);
+    }
+
+    .cta-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+    }
+
+    /* Preço */
+    .preco-section {
+      background: linear-gradient(180deg, #f5f3f0 0%, var(--bg) 100%);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .preco-valor {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .preco-compare {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin: 1rem 0 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .faq-item h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item p {
+      font-size: 0.98rem;
+      margin-bottom: 0;
+    }
+
+    /* Fechamento - dois caminhos */
+    .dois-caminhos {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .caminho {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .caminho.caminho-2 {
+      border-color: var(--accent);
+      background: rgba(46, 125, 50, 0.04);
+    }
+
+    .caminho h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* O que você recebe - cards */
+    .entrega-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .entrega-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .entrega-card .resultado {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Garantia box */
+    .garantia-box {
+      background: rgba(46, 125, 50, 0.08);
+      border: 1px solid rgba(46, 125, 50, 0.25);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+    }
+
+    /* Checklist */
+    .checklist {
+      list-style: none;
+    }
+
+    .checklist li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+
+    .checklist li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--arrow);
+    }
+
+    /* Custo inação */
+    .custo-lista {
+      list-style: none;
+    }
+
+    .custo-lista li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+
+    .custo-lista li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    /* O que é - bullet de exclusão */
+    .exclusoes {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .exclusoes li {
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+
+    .exclusoes li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--text-muted);
+    }
+
+    /* Quem será seu professor */
+    .professor-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.75rem 1.75rem;
+    }
+
+    .professor-card h2 {
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 3rem 0 2rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Sticky CTA no mobile */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      z-index: 100;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta {
+        display: block;
+      }
+      body {
+        padding-bottom: 80px;
+      }
+      .cta {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">Manual do Homem de Pelúcia</div>
+      <h1>Pare de ser uma cadelinha emocional — e assuma as rédeas da sua vida.</h1>
+      <p class="subheadline">Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô quando a vida pesa.</p>
+      <!-- Troque #comprar pelo link do seu checkout (Hotmart, Eduzz, etc.) em todos os botões -->
+      <div class="cta-wrapper">
+        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta">Quero assumir as rédeas</a>
+        <p class="cta-note">Acesso imediato • 7 dias de garantia</p>
+      </div>
+    </header>
+
+    <section>
+      <p>Você não "tem um jeito intenso".</p>
+      <p>Você tem um <strong>padrão</strong>.</p>
+      <p>E ele aparece sempre do mesmo jeito — <strong>na hora que aperta</strong>.</p>
+      <p><strong>Qual desses você reconhece?</strong></p>
+
+      <div class="cenario">
+        <h3>Cenário 1 — O homem funcional que trava</h3>
+        <p>No trabalho você até anda. Cumpre, entrega, paga conta.</p>
+        <p>Aí aparece uma decisão que exige peito: pedir aumento, sair de um emprego bosta, começar um projeto, cortar um "amigo" sanguessuga, assumir um relacionamento de verdade.</p>
+        <p>Você abre mil abas. Vê vídeo, lê thread, pede opinião pra três pessoas. Faz lista. Refaz lista.</p>
+        <p>E passa uma semana. Passam duas.</p>
+        <p>Você chama isso de "prudência". Mas a verdade é que você tá <strong>evitando o peso</strong>. Porque decidir implica perder opções. E perder opções dói.</p>
+        <p>No fim, quem decide é a vida: você fica onde tá, engole seco, e vai anestesiar mais tarde.</p>
+        <blockquote>"Eu sou um cara capaz… então por que eu não consigo me mexer?" — É isso que você pensa.</blockquote>
+      </div>
+
+      <div class="cenario">
+        <h3>Cenário 2 — O devoto que vira ressentido</h3>
+        <p>Você faz tudo "certo". Escuta. Se adapta. Evita conflito. Segura o próprio incômodo.</p>
+        <p>Você vira o homem tranquilo… por fora. Por dentro você tá fazendo conta: <em>"Uma hora ela vai reconhecer."</em> <em>"Uma hora ela vai valorizar."</em> <em>"Uma hora ela vai parar de me testar."</em></p>
+        <p>Só que ela não para. E você também não fala. Você acumula. Engole. Finge que não liga.</p>
+        <p>Até que um dia você explode por uma coisa pequena — ou some do nada.</p>
+        <p>E quando isso acontece, você percebe a verdade feia: você não estava sendo bom. Você estava <strong>comprando amor com submissão</strong>.</p>
+        <blockquote>"Eu virei capacho… e ainda saí como o errado." — É isso que você pensa.</blockquote>
+      </div>
+
+      <div class="cenario">
+        <h3>Cenário 3 — O obsessivo que nunca sustenta</h3>
+        <p>Você conhece alguém. Química instantânea. Duas semanas: ela é incrível. Dois meses: ela é perfeita. Três meses: você começa a notar "defeitos". Quatro meses: você já tá pensando na próxima.</p>
+        <p><em>"Como eu me iludi tanto?"</em> — É isso que você pensa.</p>
+        <p>Aí vem outra. Mesmo ciclo. Mesma empolgação. Mesma queda. Você não entende o que muda — porque não muda nada.</p>
+        <p>Você só saiu da <strong>fantasia</strong> e encontrou a <strong>mulher real</strong>. E a mulher real tem defeito, cobra, reclama, não corresponde à imagem que você criou. E em vez de sustentar, você descarta.</p>
+        <p>O padrão se repete: conhece → empolga → frustra → termina → próxima.</p>
+        <blockquote>"Sempre acaba igual. Não sei o que tem de errado comigo." — É isso que você pensa.</blockquote>
+      </div>
+    </section>
+
+    <section>
+      <p>Se você se reconheceu em um desses cenários — ou nos três — não é azar.</p>
+      <p>Não é falta de sorte.</p>
+      <p>Não é "o mundo moderno".</p>
+      <p>Não é "as mulheres de hoje".</p>
+      <p>Não é acaso.</p>
+      <p><strong>É padrão.</strong></p>
+      <p>E a parte mais irritante...</p>
+      <p>Você pode ser inteligente, trabalhador, ter valor…</p>
+      <p>E mesmo assim, na área afetiva, virar um moleque.</p>
+      <p>Porque existe um <strong>mecanismo psicológico</strong> por trás disso.</p>
+    </section>
+
+    <section>
+      <h2>Vê se isso é você</h2>
+      <ul class="checklist">
+        <li>Você trava na hora de decidir e chama isso de "prudência"</li>
+        <li>Você some quando aperta e chama isso de "paz"</li>
+        <li>Você faz tudo "certo" e vira ressentido por dentro</li>
+        <li>Você aceita migalha pra não ficar sozinho</li>
+        <li>Você tenta comprar amor com submissão (e depois odeia a mulher por isso)</li>
+        <li>Você se anestesia no pornô/scroll/comida quando a vida pesa</li>
+        <li>Você tem dificuldade de dizer "não" sem culpa</li>
+      </ul>
+      <p>Se você marcou 3 ou mais, presta atenção: <strong>isso não é acaso. É padrão</strong>. E esse padrão tem nome.</p>
+    </section>
+
+    <section>
+      <h2>Os 4 estágios da masculinidade emocional</h2>
+      <p>A psicologia descobriu que todo homem passa por <strong>4 estágios</strong> de desenvolvimento emocional. O problema? Quase ninguém sai dos 3 primeiros. E ficar preso em um deles é o que te faz repetir os mesmos erros.</p>
+
+      <div class="estagio">
+        <h3>Estágio 1 — EVA (O Dependente)</h3>
+        <p><strong>Como ele age:</strong></p>
+        <ul>
+          <li>Não vive sem validação feminina</li>
+          <li>Aceita migalhas. Vira capacho.</li>
+          <li>Fica olhando o celular igual idiota esperando ela responder</li>
+          <li>Usa pornô/masturbação como anestesia emocional</li>
+        </ul>
+        <p><strong>Frase que define:</strong> <em>"Eu viro uma cadelinha, depois fico com nojo de mim."</em></p>
+        <p><strong>Por que ele se arrebenta:</strong> Mulher não sente atração. Ele é previsível demais. Ela o vê como "amiguinho" ou provedor.</p>
+        <p><strong>O que acontece:</strong> Ele aceita desrespeito porque tem medo de ficar sozinho.</p>
+      </div>
+
+      <div class="estagio">
+        <h3>Estágio 2 — HELENA (O Obsessivo)</h3>
+        <p><strong>Como ele age:</strong></p>
+        <ul>
+          <li>Se apaixona rápido. Idealiza loucamente.</li>
+          <li>3 meses depois: "Como fui me iludir?"</li>
+          <li>Ciclo eterno: conhece → empolga → frustra → termina → próxima</li>
+          <li>Sempre comparando. Sempre pensando na próxima.</li>
+        </ul>
+        <p><strong>Frase que define:</strong> <em>"Sempre acaba igual. Não sei o que tem de errado comigo."</em></p>
+        <p><strong>Por que ele se arrebenta:</strong> Ele não ama a mulher real. Ama a fantasia que criou na cabeça dele.</p>
+        <p><strong>O que acontece:</strong> Quando ela age como humana normal (falha, cobra, reclama), ele perde todo o interesse.</p>
+      </div>
+
+      <div class="estagio">
+        <h3>Estágio 3 — MARIA (O Devoto Frustrado)</h3>
+        <p><strong>Como ele age:</strong></p>
+        <ul>
+          <li>Coloca a mulher no pedestal</li>
+          <li>Faz tudo por ela. Esperando reconhecimento.</li>
+          <li>Nega qualquer defeito dela.</li>
+          <li>Tem medo de cobrar ("vou virar vilão")</li>
+        </ul>
+        <p><strong>Frase que define:</strong> <em>"Faço tudo certo e ainda assim perco. Ela manda em mim e eu não consigo nem falar."</em></p>
+        <p><strong>Por que ele se arrebenta:</strong> Ele idealizou tanto que qualquer imperfeição vira choque. Acumula ressentimento e não fala nada.</p>
+        <p><strong>O que acontece:</strong> Explode do nada ou vira escravo da relação.</p>
+      </div>
+
+      <div class="estagio">
+        <h3>Estágio 4 — SOFIA (O Integrado)</h3>
+        <p><strong>Como ele age:</strong></p>
+        <ul>
+          <li>Ama sem projetar fantasias</li>
+          <li>Vê a mulher como ela é (defeitos + qualidades)</li>
+          <li>Tem força E sensibilidade</li>
+          <li>Não é manipulado. Não manipula.</li>
+        </ul>
+        <p><strong>Frase que define:</strong> <em>"Eu escolhi. Agora eu cultivo."</em></p>
+        <p><strong>Por que funciona:</strong> Ele integrou os dois lados. Não precisa mais de validação externa.</p>
+        <p><strong>O que acontece:</strong> Relacionamentos duram. Ele não se arrebenta mais.</p>
+      </div>
+
+      <p><strong>Menos de 5%</strong> dos homens chegam no estágio 4. A maioria fica a vida inteira oscilando entre os 3 primeiros. Conhece. Empolga. Frustra. Termina. Repete. E quanto mais você repete, mais forte o padrão fica no seu cérebro. A não ser que você <strong>interrompa o ciclo</strong>.</p>
+    </section>
+
+    <section>
+      <h2>Por que isso acontece (e por que não é culpa sua)</h2>
+      <p>Você aprendeu a <strong>evitar desconforto</strong>, não a sustentar pressão. Aí você foge, adia ou anestesia.</p>
+      <p>Você confunde <strong>aprovação com segurança</strong>: quando alguém "esfria", teu corpo entra em modo pânico e você se humilha pra voltar ao normal.</p>
+      <p>Você tenta resolver o mundo interno com solução externa: controle, performance, sumiço ou pornografia — qualquer coisa pra não sentir o peso.</p>
+      <p>A raiz é simples: quando a tua vida emocional não tem <strong>"mão no volante"</strong>, ela vira um sistema automático. E sistema automático não escolhe o melhor — ele escolhe o que alivia mais rápido.</p>
+      <p>É por isso que o cara inteligente vira moleque na hora do aperto: não falta cérebro, <strong>falta condução interna</strong>.</p>
+      <p>Então não: não é "falta de força de vontade". Não é "falta de autoestima". É <strong>falta de método</strong> pra conduzir o que acontece dentro — antes que isso decida por você.</p>
+      <p><strong>E não é culpa sua.</strong> Ninguém te ensinou isso.</p>
+      <p>Seu pai provavelmente não sabia (porque ninguém ensinou pra ele). A escola não ensinou. A sociedade te disse: "Homem não chora. Aguenta. Se vira." E você fez exatamente isso.</p>
+      <p>Virou aquele cara que aguenta TUDO — até não aguentar mais e explodir. Ou virou aquele cara que "não sente nada" — até se apaixonar e virar dependente emocional.</p>
+      <p>Você foi jogado no mundo <strong>sem o manual</strong>. Mas existe saída.</p>
+    </section>
+
+    <section>
+      <h2>O que muda na prática</h2>
+      <p>Quando você identifica seu padrão e começa a trabalhar com ele, coisas concretas mudam:</p>
+
+      <div class="beneficios-categoria">
+        <h3>Relacionamento e respeito</h3>
+        <p><strong>Geral:</strong></p>
+        <ul class="arrow-list">
+          <li>Você consegue dizer "não" sem culpa (e sem justificar como criança)</li>
+          <li>Você consegue pedir clareza sem mendigar, sem cena e sem ameaçar ir embora</li>
+          <li>Você consegue colocar limite na hora em vez de engolir e virar ressentido depois</li>
+        </ul>
+        <p><strong>Se você está no Estágio 1 (Dependente):</strong></p>
+        <ul class="arrow-list">
+          <li>Você para de "caçar sinal" no celular (visto/online/stories)</li>
+          <li>Você consegue ficar sozinho sem entrar em desespero</li>
+          <li>Você passa a ser visto como homem, não como "amiguinho"</li>
+        </ul>
+        <p><strong>Se você está no Estágio 2 (Obsessivo):</strong></p>
+        <ul class="arrow-list">
+          <li>Você consegue passar dos 3-6 meses sem perder o interesse</li>
+          <li>Você para de colocar mulher no pedestal (e depois ficar decepcionado)</li>
+          <li>Você consegue ter relacionamento que dure mais de 1 ano</li>
+        </ul>
+        <p><strong>Se você está no Estágio 3 (Devoto):</strong></p>
+        <ul class="arrow-list">
+          <li>Você consegue cobrar sem se sentir vilão</li>
+          <li>Você para de se culpar quando ELA age errado</li>
+          <li>Você não vira escravo do humor dela</li>
+        </ul>
+      </div>
+
+      <div class="beneficios-categoria">
+        <h3>Vícios e autocontrole</h3>
+        <p><strong>Geral:</strong></p>
+        <ul class="arrow-list">
+          <li>Você consegue segurar o impulso (pornô/scroll/comida) quando a cabeça pesa — sem precisar "anestesiar"</li>
+          <li>Você consegue passar por uma noite ruim sem se destruir no automático</li>
+          <li>Você consegue voltar pro eixo em crise (ciúme, raiva, carência) antes de falar/fazer merda</li>
+        </ul>
+        <p><strong>Estágio 1:</strong> Você reduz pornografia/masturbação compulsiva porque entende o gatilho emocional por trás. Você tem critério pra escolher (ao invés de agarrar qualquer uma que dá bola).</p>
+        <p><strong>Estágio 2:</strong> Você para de comparar e fantasiar com a "próxima". Você vê sinais vermelhos ANTES de se envolver.</p>
+        <p><strong>Estágio 3:</strong> Você para de acumular ressentimento calado. Você ama sem idealizar ("anjo perfeito" não existe).</p>
+      </div>
+
+      <div class="beneficios-categoria">
+        <h3>Decisão e trabalho</h3>
+        <ul class="arrow-list">
+          <li>Você consegue tomar decisão em 24–48h (em vez de ruminar semanas) quando já tem informação suficiente</li>
+          <li>Você consegue agir mesmo com medo: mandar a mensagem certa, marcar a conversa, tomar a iniciativa</li>
+          <li>Você consegue assumir uma escolha sem ficar olhando pra trás como quem perdeu a vida</li>
+        </ul>
+      </div>
+
+      <div class="beneficios-categoria">
+        <h3>Presença e status</h3>
+        <ul class="arrow-list">
+          <li>Você consegue ficar em silêncio sem desespero (não precisa provar nada pra ninguém)</li>
+          <li>Você consegue aguentar desconforto social sem fugir, sumir ou virar passivo-agressivo</li>
+          <li>Você consegue ser tratado como homem porque para de vazar reatividade e começa a agir com estabilidade</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Custo da inação</h2>
+      <p>Se tu não mudar, <strong>isso não "passa"</strong>. Só troca de roupa. Hoje é vergonha silenciosa. Amanhã vira ressentimento ("mulher é tudo igual", "ninguém me respeita").</p>
+      <ul class="custo-lista">
+        <li>Você vai continuar perdendo mulher boa por travar, sumir, mendigar ou explodir na hora errada</li>
+        <li>Você vai colecionar relações curtas e repetidas: começa intenso, termina vazio, e você nunca entende "por quê"</li>
+        <li>Você vai continuar anestesiando no automático (pornô/scroll/comida) e chamando isso de "só um hábito"</li>
+        <li>E o pior: você vai se acostumar a viver abaixo do que poderia — com aquela frase interna crescendo devagar: <em>"Eu desperdicei tempo demais sendo refém."</em></li>
+      </ul>
+    </section>
+
+    <section>
+      <p>A boa notícia?</p>
+      <p>A psicologia já mapeou esse tipo de problema.</p>
+      <p>Claro, existe a individualidade de cada um. Mas justamente por podermos fazer ciência, conseguimos identificar padrões psíquicos comuns a certos tipos de pessoas.</p>
+      <p>E é aí que entra a <strong>psicoeducação</strong>.</p>
+      <p>Psicoeducação é nada mais nada menos que entender esses padrões — e a partir deles, ajustar dois ou três pontos nas principais áreas da sua vida.</p>
+      <p>É coisa simples de resolver.</p>
+      <p>Mas que poucos homens dão atenção.</p>
+      <p>Seja porque existe uma venda nos olhos deles...</p>
+      <p>Seja porque eles simplesmente não conseguem enxergar o que há de errado pra sofrerem dessa forma.</p>
+      <p>Eu cansei de ver esse padrão se repetindo.</p>
+      <p>Cansei de ver homens sem rumo por não conseguirem ajustar esses simples pontos na vida.</p>
+      <p><strong>Foi por isso que eu criei o Manual do Homem de Pelúcia.</strong></p>
+    </section>
+
+    <section>
+      <h2>O que é o Manual do Homem de Pelúcia</h2>
+      <p>É simples: <strong>uma aula objetiva + um plano de 7 dias</strong>.</p>
+      <ul class="arrow-list">
+        <li><strong>Uma aula de ~54 minutos</strong> pra você entender o padrão e o mecanismo por trás dele (sem terapiafalês)</li>
+        <li><strong>Um plano de 7 dias</strong> pra transformar isso em ação — no dia real, na hora que aperta</li>
+      </ul>
+      <p>E já pra cortar objeção antes dela nascer:</p>
+      <ul class="exclusoes">
+        <li>Não é terapia (não substitui acompanhamento clínico)</li>
+        <li>Não é sedução (não tem script pra "pegar mulher")</li>
+        <li>Não é motivacional (não tem "vai pra cima campeão")</li>
+      </ul>
+      <p>É um <strong>manual tático</strong>, pra você usar quando: você trava, você some, você se humilha, você vai anestesiar, ou você sente que vai fazer cagada.</p>
+      <p><strong>Em menos de uma hora você resolve essas questões.</strong></p>
+    </section>
+
+    <section>
+      <h2>O que você recebe</h2>
+
+      <div class="entrega-card">
+        <h4>1. Aula principal (56 min) — "Assuma as rédeas"</h4>
+        <p>Você entende por que um <strong>homem inteligente vira moleque na hora do aperto</strong>, e aprende o mapa que separa: decisão de fuga, limite de ressentimento, firmeza de agressividade.</p>
+        <p class="resultado"><strong>Resultado:</strong> você passa a <strong>reconhecer o padrão antes dele te dominar</strong>.</p>
+      </div>
+
+      <div class="entrega-card">
+        <h4>2. Plano de 7 dias (Caderno de Ativação)</h4>
+        <p>Não é diário fofo. É <strong>prática guiada</strong>. Você vai ter um roteiro curto pra usar todo dia (ou sempre que precisar) pra:</p>
+        <ul class="arrow-list">
+          <li>Parar de mendigar atenção e voltar a agir com dignidade</li>
+          <li>Parar de travar e tomar decisões pequenas com consistência (sem drama)</li>
+          <li>Parar de anestesiar e segurar a pressão sem fugir pro automático</li>
+          <li>Aprender a colocar limite sem culpa e sem virar vilão</li>
+        </ul>
+        <p class="resultado"><strong>Resultado:</strong> reação vira hábito. E hábito vira <strong>respeito</strong>.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Pra quem é / Pra quem não é</h2>
+      <p><strong>É pra você que:</strong></p>
+      <ul class="arrow-list">
+        <li>Se pega travando, sumindo ou se humilhando quando a vida aperta</li>
+        <li>Quer virar um cara estável e respeitável (sem teatro e sem virar babaca)</li>
+        <li>Tá cansado de repetir o ciclo: vergonha → anestesia → culpa → repetição</li>
+      </ul>
+      <p><strong>Não é pra você que:</strong></p>
+      <ul class="arrow-list">
+        <li>Quer um "truque" pra manipular mulher ou vencer discussão</li>
+        <li>Quer uma solução mágica sem prática (aqui tem 7 dias de trabalho)</li>
+        <li>Acha que qualquer desconforto é "gatilho" e usa isso como desculpa pra não crescer</li>
+      </ul>
+    </section>
+
+    <section>
+      <p>Eu poderia cobrar facilmente uns 200, 300 reais por isso.</p>
+      <p>Ou pelo menos o preço de uma consulta minha.</p>
+      <p>É o que vejo outros "gurus de relacionamento" cobrando por aí...</p>
+      <p>(Por uma qualidade inferior ao Manual do Homem de Pelúcia, modéstia à parte...)</p>
+      <p>Mas eu resolvi fazer diferente.</p>
+      <p>Pra você não ter desculpa nenhuma pra mudar de vida.</p>
+      <p>É uma hora de aula prática + um plano de ação pra mudar de vida.</p>
+      <p>Em troca de alguns trocados que você pode ter aí.</p>
+      <p>Menos do que um lanche que você paga naquele encontro que vai levar toco.</p>
+      <p><strong>Por isso, seu investimento vai ser de...</strong></p>
+    </section>
+
+    <section id="comprar">
+      <h2>Preço</h2>
+      <div class="preco-section">
+        <p class="preco-valor">R$ 47</p>
+        <p class="preco-compare">Menos do que: uma pizza com cerveja, um mês de streaming, e principalmente: menos do que uma cagada emocional que te custa <strong>respeito, paz e tempo</strong>.</p>
+        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta">Quero assumir as rédeas</a>
+        <p class="cta-note">Acesso imediato • 7 dias de garantia</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Garantia</h2>
+      <div class="garantia-box">
+        <p>Você tem <strong>7 dias</strong> pra assistir, testar e aplicar. Se não fizer sentido pra você, pede reembolso. <strong>Sem perguntas. Sem estresse.</strong></p>
+      </div>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <h4>1) Isso é redpill?</h4>
+        <p>Não. Não tem ódio de mulher, não tem "alfa teatral", não tem guerra dos sexos. É um manual de maturidade e condução interna: parar de agir como menino e virar homem funcional.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>2) Funciona se eu estiver solteiro?</h4>
+        <p>Sim. Talvez até mais. Porque você vai parar de buscar validação, parar de se humilhar e parar de anestesiar — e isso muda tua postura antes mesmo de aparecer alguém.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>3) E se eu estiver num relacionamento?</h4>
+        <p>Funciona mais ainda. Você vai aprender a colocar limite, pedir clareza e não virar ressentido. O objetivo é relacionamento com respeito — não submissão.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>4) Quanto tempo por dia eu preciso?</h4>
+        <p>O plano foi feito pra caber na vida real: 10–15 minutos por dia (e o protocolo de crise é coisa de 3–5 minutos).</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>5) Como eu acesso?</h4>
+        <p>Você compra e recebe acesso imediato na plataforma. Aula + materiais liberados na hora.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>6) Por quanto tempo tenho acesso?</h4>
+        <p>1 ano. Você pode rever quando precisar.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>7) Posso parcelar?</h4>
+        <p>Se a plataforma permitir, sim. Se não, o valor é propositalmente baixo pra ser decisão simples.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>8) Isso substitui terapia?</h4>
+        <p>Não. Isso é um manual tático de autocondução e prática diária. Terapia é outro nível, outra profundidade. Aqui é ferramenta pra vida real.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Quem vai ser teu professor</h2>
+      <div class="professor-card">
+        <p>Eu sou o <strong>Diego Moreira</strong>.</p>
+        <p>Sou <strong>psicólogo</strong>, atendo em clínica há <strong>mais de 5 anos</strong>, e já acompanhei <strong>centenas de homens</strong> no ponto exato onde tudo desanda: quando a vida aperta, quando a emoção sobe, quando a decisão exige peito.</p>
+        <p>Há <strong>2 anos</strong> eu também atuo como <strong>supervisor de psicoterapeutas</strong> — ou seja: além de atender, eu treino outros terapeutas pra enxergarem padrões, não só sintomas. Isso me obrigou a ficar ainda mais preciso: menos teoria bonita, mais ferramenta que funciona na vida real.</p>
+        <p>Além da clínica, eu sou <strong>professor</strong> e <strong>produtor de conteúdo</strong>. Eu pego coisa complexa (psicologia profunda, afetividade, comportamento masculino, hábito, vício, escolha) e traduzo pra um jeito que dá pra entender e aplicar <strong>sem virar papo de autoajuda</strong>.</p>
+        <p>O que você vai receber aqui não é motivação.<br>É <strong>diagnóstico direto + método prático</strong>.</p>
+        <p>Porque homem não precisa de mais uma palestra sobre "seja melhor". Homem precisa de um jeito claro de <strong>assumir as rédeas da própria vida</strong> e pronto.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sua escolha</h2>
+      <p>A partir de agora, depois de ler tudo até o final, restam só dois caminhos...</p>
+
+      <div class="dois-caminhos">
+        <div class="caminho">
+          <h4>1) Continuar repetindo.</h4>
+          <p>Travando onde importa. Sumindo quando aperta. Se humilhando por migalha. Anestesiando no pornô/scroll e fingindo que "tá tudo sob controle". Segue vivendo fofo.</p>
+        </div>
+        <div class="caminho caminho-2">
+          <h4>2) Pegar o mapa e aplicar.</h4>
+          <p>Uma aula direta + 7 dias de prática. E você começa a fazer o que <strong>homem adulto</strong> faz: segura a pressão, decide e sustenta. Por fim, deixa de ser um <strong>Homem de Pelúcia</strong>.</p>
+        </div>
+      </div>
+
+      <p>Se você quer o caminho 2:</p>
+      <div class="cta-wrapper">
+        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta">Quero assumir as rédeas</a>
+        <p class="cta-note">Acesso imediato • Garantia incondicional de 7 dias</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Manual do Homem de Pelúcia — Todos os direitos reservados</p>
+    </footer>
+  </div>
+
+  <div class="sticky-cta">
+    <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta">Quero assumir as rédeas</a>
+  </div>
+</body>
+</html>
