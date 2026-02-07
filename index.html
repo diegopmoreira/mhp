@@ -63,7 +63,7 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
       padding: 0 1.5rem 4rem;
     }
 
-    /* Header / Hero */
+    /* Header */
     header {
       padding: 3rem 0 2.5rem;
       border-bottom: 1px solid var(--border);
@@ -419,16 +419,77 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
       color: var(--text-muted);
     }
 
-    /* Quem será seu professor */
-    .professor-card {
+    /* Quem criou / autoridade — texto + foto */
+    .autoridade-card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1.75rem 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
     }
 
-    .professor-card h2 {
+    @media (min-width: 560px) {
+      .autoridade-card {
+        grid-template-columns: 200px 1fr;
+      }
+    }
+
+    .autoridade-foto {
+      text-align: center;
+    }
+
+    .autoridade-foto img {
+      width: 100%;
+      max-width: 200px;
+      max-height: 240px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 559px) {
+      .autoridade-foto {
+        order: -1;
+      }
+
+      .autoridade-foto img {
+        max-width: 160px;
+        max-height: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    .autoridade-texto p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Depoimentos */
+    .depoimento-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem 1.75rem;
       margin-bottom: 1rem;
+    }
+
+    .depoimento-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .depoimento-card blockquote {
+      margin: 0 0 0.75rem;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .depoimento-autor {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-style: italic;
     }
 
     /* Footer */
@@ -472,12 +533,7 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
     <header>
       <div class="logo">Manual do Homem de Pelúcia</div>
       <h1>Pare de ser uma cadelinha emocional — e assuma as rédeas da sua vida.</h1>
-      <p class="subheadline">Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô quando a vida pesa.</p>
-      <!-- Troque #comprar pelo link do seu checkout (Hotmart, Eduzz, etc.) em todos os botões -->
-      <div class="cta-wrapper">
-        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="fbq('track', 'AddToCart', {value: 47, currency: 'BRL'});">Quero assumir as rédeas</a>
-        <p class="cta-note">Acesso imediato • 7 dias de garantia</p>
-      </div>
+      <p class="subheadline">Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô/doomscrooling quando a vida pesa.</p>
     </header>
 
     <section>
@@ -488,244 +544,131 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
 
       <div class="cenario">
         <h3>Cenário 1 — O homem funcional que trava</h3>
-        <p>No trabalho você até anda. Cumpre, entrega, paga conta.</p>
-        <p>Aí aparece uma decisão que exige peito: pedir aumento, sair de um emprego bosta, começar um projeto, cortar um "amigo" sanguessuga, assumir um relacionamento de verdade.</p>
-        <p>Você abre mil abas. Vê vídeo, lê thread, pede opinião pra três pessoas. Faz lista. Refaz lista.</p>
-        <p>E passa uma semana. Passam duas.</p>
-        <p>Você chama isso de "prudência". Mas a verdade é que você tá <strong>evitando o peso</strong>. Porque decidir implica perder opções. E perder opções dói.</p>
-        <p>No fim, quem decide é a vida: você fica onde tá, engole seco, e vai anestesiar mais tarde.</p>
-        <blockquote>"Eu sou um cara capaz… então por que eu não consigo me mexer?" — É isso que você pensa.</blockquote>
+        <p>No trabalho você funciona. Cumpre, entrega, paga conta. Mas quando aparece uma decisão que exige peito — pedir aumento, assumir um relacionamento, cortar alguém — você trava.</p>
+        <p>Abre mil abas, faz lista, pede opinião. Passam duas semanas e quem decide é a vida. Você fica onde tá.</p>
+        <blockquote>"Eu sou um cara capaz… então por que eu não consigo me mexer?"</blockquote>
       </div>
 
       <div class="cenario">
         <h3>Cenário 2 — O devoto que vira ressentido</h3>
-        <p>Você faz tudo "certo". Escuta. Se adapta. Evita conflito. Segura o próprio incômodo.</p>
-        <p>Você vira o homem tranquilo… por fora. Por dentro você tá fazendo conta: <em>"Uma hora ela vai reconhecer."</em> <em>"Uma hora ela vai valorizar."</em> <em>"Uma hora ela vai parar de me testar."</em></p>
-        <p>Só que ela não para. E você também não fala. Você acumula. Engole. Finge que não liga.</p>
-        <p>Até que um dia você explode por uma coisa pequena — ou some do nada.</p>
-        <p>E quando isso acontece, você percebe a verdade feia: você não estava sendo bom. Você estava <strong>comprando amor com submissão</strong>.</p>
-        <blockquote>"Eu virei capacho… e ainda saí como o errado." — É isso que você pensa.</blockquote>
+        <p>Você faz tudo "certo". Escuta, se adapta, evita conflito. Por dentro, fica esperando: "Uma hora ela vai reconhecer."</p>
+        <p>Só que não reconhece. Você acumula, engole, finge que não liga. Até explodir por uma bobagem — ou sumir do nada.</p>
+        <blockquote>"Eu virei capacho… e ainda saí como o errado."</blockquote>
       </div>
 
       <div class="cenario">
         <h3>Cenário 3 — O obsessivo que nunca sustenta</h3>
-        <p>Você conhece alguém. Química instantânea. Duas semanas: ela é incrível. Dois meses: ela é perfeita. Três meses: você começa a notar "defeitos". Quatro meses: você já tá pensando na próxima.</p>
-        <p><em>"Como eu me iludi tanto?"</em> — É isso que você pensa.</p>
-        <p>Aí vem outra. Mesmo ciclo. Mesma empolgação. Mesma queda. Você não entende o que muda — porque não muda nada.</p>
-        <p>Você só saiu da <strong>fantasia</strong> e encontrou a <strong>mulher real</strong>. E a mulher real tem defeito, cobra, reclama, não corresponde à imagem que você criou. E em vez de sustentar, você descarta.</p>
-        <p>O padrão se repete: conhece → empolga → frustra → termina → próxima.</p>
-        <blockquote>"Sempre acaba igual. Não sei o que tem de errado comigo." — É isso que você pensa.</blockquote>
+        <p>Duas semanas: ela é incrível. Dois meses: perfeita. Três meses: você nota os "defeitos". Quatro meses: já pensa na próxima.</p>
+        <p>O ciclo se repete: conhece, empolga, frustra, termina. Você não ama a mulher real — ama a fantasia que criou.</p>
+        <blockquote>"Sempre acaba igual. Não sei o que tem de errado comigo."</blockquote>
       </div>
     </section>
 
     <section>
-      <p>Se você se reconheceu em um desses cenários — ou nos três — não é azar.</p>
-      <p>Não é falta de sorte.</p>
-      <p>Não é "o mundo moderno".</p>
-      <p>Não é "as mulheres de hoje".</p>
-      <p>Não é acaso.</p>
-      <p><strong>É padrão.</strong></p>
-      <p>E a parte mais irritante...</p>
-      <p>Você pode ser inteligente, trabalhador, ter valor…</p>
-      <p>E mesmo assim, na área afetiva, virar um moleque.</p>
-      <p>Porque existe um <strong>mecanismo psicológico</strong> por trás disso.</p>
-    </section>
-
-    <section>
-      <h2>Vê se isso é você</h2>
-      <ul class="checklist">
-        <li>Você trava na hora de decidir e chama isso de "prudência"</li>
-        <li>Você some quando aperta e chama isso de "paz"</li>
-        <li>Você faz tudo "certo" e vira ressentido por dentro</li>
-        <li>Você aceita migalha pra não ficar sozinho</li>
-        <li>Você tenta comprar amor com submissão (e depois odeia a mulher por isso)</li>
-        <li>Você se anestesia no pornô/scroll/comida quando a vida pesa</li>
-        <li>Você tem dificuldade de dizer "não" sem culpa</li>
-      </ul>
-      <p>Se você marcou 3 ou mais, presta atenção: <strong>isso não é acaso. É padrão</strong>. E esse padrão tem nome.</p>
+      <p>Se você se reconheceu, não é azar. <strong>É padrão.</strong></p>
+      <p>E esse padrão tem um mecanismo por trás.</p>
     </section>
 
     <section>
       <h2>Os 4 estágios da masculinidade emocional</h2>
-      <p>A psicologia descobriu que todo homem passa por <strong>4 estágios</strong> de desenvolvimento emocional. O problema? Quase ninguém sai dos 3 primeiros. E ficar preso em um deles é o que te faz repetir os mesmos erros.</p>
 
       <div class="estagio">
         <h3>Estágio 1 — EVA (O Dependente)</h3>
-        <p><strong>Como ele age:</strong></p>
         <ul>
           <li>Não vive sem validação feminina</li>
-          <li>Aceita migalhas. Vira capacho.</li>
-          <li>Fica olhando o celular igual idiota esperando ela responder</li>
-          <li>Usa pornô/masturbação como anestesia emocional</li>
+          <li>Aceita migalha pra não ficar sozinho</li>
+          <li>Usa pornô como anestesia emocional</li>
         </ul>
-        <p><strong>Frase que define:</strong> <em>"Eu viro uma cadelinha, depois fico com nojo de mim."</em></p>
-        <p><strong>Por que ele se arrebenta:</strong> Mulher não sente atração. Ele é previsível demais. Ela o vê como "amiguinho" ou provedor.</p>
-        <p><strong>O que acontece:</strong> Ele aceita desrespeito porque tem medo de ficar sozinho.</p>
+        <p><em>"Eu viro capacho, depois fico com nojo de mim."</em></p>
       </div>
 
       <div class="estagio">
         <h3>Estágio 2 — HELENA (O Obsessivo)</h3>
-        <p><strong>Como ele age:</strong></p>
         <ul>
-          <li>Se apaixona rápido. Idealiza loucamente.</li>
-          <li>3 meses depois: "Como fui me iludir?"</li>
-          <li>Ciclo eterno: conhece → empolga → frustra → termina → próxima</li>
-          <li>Sempre comparando. Sempre pensando na próxima.</li>
+          <li>Se apaixona rápido, idealiza</li>
+          <li>Enjoa em 3 meses, ciclo eterno</li>
+          <li>Ama a fantasia, não a mulher real</li>
         </ul>
-        <p><strong>Frase que define:</strong> <em>"Sempre acaba igual. Não sei o que tem de errado comigo."</em></p>
-        <p><strong>Por que ele se arrebenta:</strong> Ele não ama a mulher real. Ama a fantasia que criou na cabeça dele.</p>
-        <p><strong>O que acontece:</strong> Quando ela age como humana normal (falha, cobra, reclama), ele perde todo o interesse.</p>
+        <p><em>"Sempre acaba igual. Não sei o que tem de errado comigo."</em></p>
       </div>
 
       <div class="estagio">
-        <h3>Estágio 3 — MARIA (O Devoto Frustrado)</h3>
-        <p><strong>Como ele age:</strong></p>
+        <h3>Estágio 3 — MARIA (O Devoto)</h3>
         <ul>
-          <li>Coloca a mulher no pedestal</li>
-          <li>Faz tudo por ela. Esperando reconhecimento.</li>
-          <li>Nega qualquer defeito dela.</li>
-          <li>Tem medo de cobrar ("vou virar vilão")</li>
+          <li>Faz tudo por ela, espera reconhecimento</li>
+          <li>Tem medo de cobrar, acumula ressentimento</li>
+          <li>Explode do nada ou vira escravo</li>
         </ul>
-        <p><strong>Frase que define:</strong> <em>"Faço tudo certo e ainda assim perco. Ela manda em mim e eu não consigo nem falar."</em></p>
-        <p><strong>Por que ele se arrebenta:</strong> Ele idealizou tanto que qualquer imperfeição vira choque. Acumula ressentimento e não fala nada.</p>
-        <p><strong>O que acontece:</strong> Explode do nada ou vira escravo da relação.</p>
+        <p><em>"Faço tudo certo e ainda assim perco."</em></p>
       </div>
 
       <div class="estagio">
         <h3>Estágio 4 — SOFIA (O Integrado)</h3>
-        <p><strong>Como ele age:</strong></p>
         <ul>
           <li>Ama sem projetar fantasias</li>
-          <li>Vê a mulher como ela é (defeitos + qualidades)</li>
           <li>Tem força E sensibilidade</li>
-          <li>Não é manipulado. Não manipula.</li>
+          <li>Não precisa de validação externa</li>
         </ul>
-        <p><strong>Frase que define:</strong> <em>"Eu escolhi. Agora eu cultivo."</em></p>
-        <p><strong>Por que funciona:</strong> Ele integrou os dois lados. Não precisa mais de validação externa.</p>
-        <p><strong>O que acontece:</strong> Relacionamentos duram. Ele não se arrebenta mais.</p>
+        <p><em>"Eu escolhi. Agora eu cultivo."</em></p>
       </div>
 
-      <p><strong>Menos de 5%</strong> dos homens chegam no estágio 4. A maioria fica a vida inteira oscilando entre os 3 primeiros. Conhece. Empolga. Frustra. Termina. Repete. E quanto mais você repete, mais forte o padrão fica no seu cérebro. A não ser que você <strong>interrompa o ciclo</strong>.</p>
+      <p><strong>Menos de 5% dos homens chegam aqui.</strong></p>
+      <p>A maioria fica presa nos 3 primeiros a vida inteira. A não ser que você <strong>interrompa o ciclo</strong>.</p>
     </section>
 
     <section>
-      <h2>Por que isso acontece (e por que não é culpa sua)</h2>
-      <p>Você aprendeu a <strong>evitar desconforto</strong>, não a sustentar pressão. Aí você foge, adia ou anestesia.</p>
-      <p>Você confunde <strong>aprovação com segurança</strong>: quando alguém "esfria", teu corpo entra em modo pânico e você se humilha pra voltar ao normal.</p>
-      <p>Você tenta resolver o mundo interno com solução externa: controle, performance, sumiço ou pornografia — qualquer coisa pra não sentir o peso.</p>
-      <p>A raiz é simples: quando a tua vida emocional não tem <strong>"mão no volante"</strong>, ela vira um sistema automático. E sistema automático não escolhe o melhor — ele escolhe o que alivia mais rápido.</p>
-      <p>É por isso que o cara inteligente vira moleque na hora do aperto: não falta cérebro, <strong>falta condução interna</strong>.</p>
-      <p>Então não: não é "falta de força de vontade". Não é "falta de autoestima". É <strong>falta de método</strong> pra conduzir o que acontece dentro — antes que isso decida por você.</p>
-      <p><strong>E não é culpa sua.</strong> Ninguém te ensinou isso.</p>
-      <p>Seu pai provavelmente não sabia (porque ninguém ensinou pra ele). A escola não ensinou. A sociedade te disse: "Homem não chora. Aguenta. Se vira." E você fez exatamente isso.</p>
-      <p>Virou aquele cara que aguenta TUDO — até não aguentar mais e explodir. Ou virou aquele cara que "não sente nada" — até se apaixonar e virar dependente emocional.</p>
-      <p>Você foi jogado no mundo <strong>sem o manual</strong>. Mas existe saída.</p>
+      <h2>Por que isso acontece</h2>
+      <p>Você aprendeu a evitar desconforto — não a sustentar pressão.</p>
+      <p>Quando a vida emocional não tem "mão no volante", ela vira sistema automático. E sistema automático escolhe o que alivia mais rápido, não o que é melhor.</p>
+      <p>É por isso que o cara inteligente vira moleque na hora do aperto: não falta cérebro, falta condução interna.</p>
+      <p><strong>E não é culpa sua.</strong> Ninguém te ensinou isso. Seu pai provavelmente não sabia. A escola não ensinou. Você foi jogado no mundo sem o manual.</p>
+      <p>Mas agora existe saída.</p>
     </section>
 
     <section>
-      <h2>O que muda na prática</h2>
-      <p>Quando você identifica seu padrão e começa a trabalhar com ele, coisas concretas mudam:</p>
+      <h2>Se você não mudar</h2>
+      <p>Isso não "passa". Só troca de roupa.</p>
+      <p>Você vai continuar perdendo mulher boa por travar, sumir ou explodir na hora errada. Vai colecionar relações curtas. Vai anestesiar no automático e chamar de "hábito".</p>
+      <p>E vai se acostumar a viver abaixo do que poderia.</p>
+    </section>
 
-      <div class="beneficios-categoria">
-        <h3>Relacionamento e respeito</h3>
-        <p><strong>Geral:</strong></p>
-        <ul class="arrow-list">
-          <li>Você consegue dizer "não" sem culpa (e sem justificar como criança)</li>
-          <li>Você consegue pedir clareza sem mendigar, sem cena e sem ameaçar ir embora</li>
-          <li>Você consegue colocar limite na hora em vez de engolir e virar ressentido depois</li>
-        </ul>
-        <p><strong>Se você está no Estágio 1 (Dependente):</strong></p>
-        <ul class="arrow-list">
-          <li>Você para de "caçar sinal" no celular (visto/online/stories)</li>
-          <li>Você consegue ficar sozinho sem entrar em desespero</li>
-          <li>Você passa a ser visto como homem, não como "amiguinho"</li>
-        </ul>
-        <p><strong>Se você está no Estágio 2 (Obsessivo):</strong></p>
-        <ul class="arrow-list">
-          <li>Você consegue passar dos 3-6 meses sem perder o interesse</li>
-          <li>Você para de colocar mulher no pedestal (e depois ficar decepcionado)</li>
-          <li>Você consegue ter relacionamento que dure mais de 1 ano</li>
-        </ul>
-        <p><strong>Se você está no Estágio 3 (Devoto):</strong></p>
-        <ul class="arrow-list">
-          <li>Você consegue cobrar sem se sentir vilão</li>
-          <li>Você para de se culpar quando ELA age errado</li>
-          <li>Você não vira escravo do humor dela</li>
-        </ul>
-      </div>
-
-      <div class="beneficios-categoria">
-        <h3>Vícios e autocontrole</h3>
-        <p><strong>Geral:</strong></p>
-        <ul class="arrow-list">
-          <li>Você consegue segurar o impulso (pornô/scroll/comida) quando a cabeça pesa — sem precisar "anestesiar"</li>
-          <li>Você consegue passar por uma noite ruim sem se destruir no automático</li>
-          <li>Você consegue voltar pro eixo em crise (ciúme, raiva, carência) antes de falar/fazer merda</li>
-        </ul>
-        <p><strong>Estágio 1:</strong> Você reduz pornografia/masturbação compulsiva porque entende o gatilho emocional por trás. Você tem critério pra escolher (ao invés de agarrar qualquer uma que dá bola).</p>
-        <p><strong>Estágio 2:</strong> Você para de comparar e fantasiar com a "próxima". Você vê sinais vermelhos ANTES de se envolver.</p>
-        <p><strong>Estágio 3:</strong> Você para de acumular ressentimento calado. Você ama sem idealizar ("anjo perfeito" não existe).</p>
-      </div>
-
-      <div class="beneficios-categoria">
-        <h3>Decisão e trabalho</h3>
-        <ul class="arrow-list">
-          <li>Você consegue tomar decisão em 24–48h (em vez de ruminar semanas) quando já tem informação suficiente</li>
-          <li>Você consegue agir mesmo com medo: mandar a mensagem certa, marcar a conversa, tomar a iniciativa</li>
-          <li>Você consegue assumir uma escolha sem ficar olhando pra trás como quem perdeu a vida</li>
-        </ul>
-      </div>
-
-      <div class="beneficios-categoria">
-        <h3>Presença e status</h3>
-        <ul class="arrow-list">
-          <li>Você consegue ficar em silêncio sem desespero (não precisa provar nada pra ninguém)</li>
-          <li>Você consegue aguentar desconforto social sem fugir, sumir ou virar passivo-agressivo</li>
-          <li>Você consegue ser tratado como homem porque para de vazar reatividade e começa a agir com estabilidade</li>
-        </ul>
+    <section>
+      <h2>Quem criou isso</h2>
+      <div class="autoridade-card">
+        <div class="autoridade-foto">
+          <img src="foto-diego.png" alt="Diego Moreira — Psicólogo clínico">
+        </div>
+        <div class="autoridade-texto">
+          <p>Eu sou o <strong>Diego Moreira</strong>.</p>
+          <p>Sou <strong>psicólogo clínico</strong>, atendo há <strong>mais de 5 anos</strong>, e já acompanhei <strong>centenas de homens</strong> no ponto exato onde tudo desanda: quando a vida aperta, quando a emoção sobe, quando a decisão exige peito.</p>
+          <p>Há 2 anos também atuo como <strong>supervisor de psicoterapeutas</strong> — treino outros profissionais pra enxergarem padrões, não só sintomas.</p>
+          <p>O que você vai receber aqui não é motivação. É <strong>diagnóstico direto + método prático</strong>.</p>
+        </div>
       </div>
     </section>
 
     <section>
-      <h2>Custo da inação</h2>
-      <p>Se tu não mudar, <strong>isso não "passa"</strong>. Só troca de roupa. Hoje é vergonha silenciosa. Amanhã vira ressentimento ("mulher é tudo igual", "ninguém me respeita").</p>
-      <ul class="custo-lista">
-        <li>Você vai continuar perdendo mulher boa por travar, sumir, mendigar ou explodir na hora errada</li>
-        <li>Você vai colecionar relações curtas e repetidas: começa intenso, termina vazio, e você nunca entende "por quê"</li>
-        <li>Você vai continuar anestesiando no automático (pornô/scroll/comida) e chamando isso de "só um hábito"</li>
-        <li>E o pior: você vai se acostumar a viver abaixo do que poderia — com aquela frase interna crescendo devagar: <em>"Eu desperdicei tempo demais sendo refém."</em></li>
-      </ul>
-    </section>
-
-    <section>
-      <p>A boa notícia?</p>
-      <p>A psicologia já mapeou esse tipo de problema.</p>
-      <p>Claro, existe a individualidade de cada um. Mas justamente por podermos fazer ciência, conseguimos identificar padrões psíquicos comuns a certos tipos de pessoas.</p>
-      <p>E é aí que entra a <strong>psicoeducação</strong>.</p>
-      <p>Psicoeducação é nada mais nada menos que entender esses padrões — e a partir deles, ajustar dois ou três pontos nas principais áreas da sua vida.</p>
-      <p>É coisa simples de resolver.</p>
-      <p>Mas que poucos homens dão atenção.</p>
-      <p>Seja porque existe uma venda nos olhos deles...</p>
-      <p>Seja porque eles simplesmente não conseguem enxergar o que há de errado pra sofrerem dessa forma.</p>
-      <p>Eu cansei de ver esse padrão se repetindo.</p>
-      <p>Cansei de ver homens sem rumo por não conseguirem ajustar esses simples pontos na vida.</p>
-      <p><strong>Foi por isso que eu criei o Manual do Homem de Pelúcia.</strong></p>
+      <h2>O que estão dizendo</h2>
+      <div class="depoimento-card">
+        <blockquote>"Eu achava que era só 'meu jeito'. Depois de assistir a aula, percebi que repetia o mesmo padrão há 10 anos. Em 3 semanas já tomei decisões que adiava há meses."</blockquote>
+        <p class="depoimento-autor">— Lucas, 32 anos, desenvolvedor</p>
+      </div>
+      <div class="depoimento-card">
+        <blockquote>"Simples e direto. Sem enrolação. Entendi por que eu sempre explodia nas relações e o que fazer diferente. Pela primeira vez me sinto no controle."</blockquote>
+        <p class="depoimento-autor">— Rafael, 28 anos, analista financeiro</p>
+      </div>
+      <div class="depoimento-card">
+        <blockquote>"Fazia terapia há 2 anos e não tinha entendido o que entendi em 1 hora de aula. O caderno de ativação é o que faltava pra eu aplicar no dia a dia."</blockquote>
+        <p class="depoimento-autor">— Thiago, 35 anos, engenheiro</p>
+      </div>
     </section>
 
     <section>
       <h2>O que é o Manual do Homem de Pelúcia</h2>
-      <p>É simples: <strong>uma aula objetiva + um plano de 7 dias</strong>.</p>
-      <ul class="arrow-list">
-        <li><strong>Uma aula de ~54 minutos</strong> pra você entender o padrão e o mecanismo por trás dele (sem terapiafalês)</li>
-        <li><strong>Um plano de 7 dias</strong> pra transformar isso em ação — no dia real, na hora que aperta</li>
-      </ul>
-      <p>E já pra cortar objeção antes dela nascer:</p>
-      <ul class="exclusoes">
-        <li>Não é terapia (não substitui acompanhamento clínico)</li>
-        <li>Não é sedução (não tem script pra "pegar mulher")</li>
-        <li>Não é motivacional (não tem "vai pra cima campeão")</li>
-      </ul>
-      <p>É um <strong>manual tático</strong>, pra você usar quando: você trava, você some, você se humilha, você vai anestesiar, ou você sente que vai fazer cagada.</p>
+      <p><strong>Uma aula de 1 hora + um plano de 7 dias.</strong></p>
+      <p>Você identifica seu padrão, entende o mecanismo por trás, e tem um roteiro prático pra interromper o ciclo.</p>
+      <p>Não é terapia. Não é sedução. Não é coach motivacional.</p>
+      <p>É um manual tático pra quando você trava, some, se humilha ou sente que vai fazer cagada.</p>
       <p><strong>Em menos de uma hora você resolve essas questões.</strong></p>
     </section>
 
@@ -733,60 +676,56 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
       <h2>O que você recebe</h2>
 
       <div class="entrega-card">
-        <h4>1. Aula principal (56 min) — "Assuma as rédeas"</h4>
-        <p>Você entende por que um <strong>homem inteligente vira moleque na hora do aperto</strong>, e aprende o mapa que separa: decisão de fuga, limite de ressentimento, firmeza de agressividade.</p>
-        <p class="resultado"><strong>Resultado:</strong> você passa a <strong>reconhecer o padrão antes dele te dominar</strong>.</p>
+        <h4>1. Aula principal (54 min) — "Assuma as rédeas"</h4>
+        <p>Você entende por que um homem inteligente vira moleque na hora do aperto — e aprende o mapa que separa: decisão de fuga, limite de ressentimento, firmeza de agressividade.</p>
+        <p class="resultado"><strong>Resultado:</strong> você reconhece o padrão antes dele te dominar.</p>
       </div>
 
       <div class="entrega-card">
-        <h4>2. Plano de 7 dias (Caderno de Ativação)</h4>
-        <p>Não é diário fofo. É <strong>prática guiada</strong>. Você vai ter um roteiro curto pra usar todo dia (ou sempre que precisar) pra:</p>
+        <h4>2. Caderno de Ativação (7 dias)</h4>
+        <p>Não é diário fofo. É prática guiada. Um roteiro curto pra usar todo dia:</p>
         <ul class="arrow-list">
-          <li>Parar de mendigar atenção e voltar a agir com dignidade</li>
-          <li>Parar de travar e tomar decisões pequenas com consistência (sem drama)</li>
-          <li>Parar de anestesiar e segurar a pressão sem fugir pro automático</li>
-          <li>Aprender a colocar limite sem culpa e sem virar vilão</li>
+          <li>Parar de mendigar atenção e agir com dignidade</li>
+          <li>Parar de travar e tomar decisões com consistência</li>
+          <li>Parar de anestesiar e segurar a pressão sem fugir</li>
+          <li>Colocar limite sem culpa e sem virar vilão</li>
         </ul>
-        <p class="resultado"><strong>Resultado:</strong> reação vira hábito. E hábito vira <strong>respeito</strong>.</p>
+        <p class="resultado"><strong>Resultado:</strong> reação vira hábito. Hábito vira respeito.</p>
       </div>
     </section>
 
     <section>
       <h2>Pra quem é / Pra quem não é</h2>
+
       <p><strong>É pra você que:</strong></p>
       <ul class="arrow-list">
         <li>Se pega travando, sumindo ou se humilhando quando a vida aperta</li>
         <li>Quer virar um cara estável e respeitável (sem teatro e sem virar babaca)</li>
         <li>Tá cansado de repetir o ciclo: vergonha → anestesia → culpa → repetição</li>
       </ul>
+
       <p><strong>Não é pra você que:</strong></p>
       <ul class="arrow-list">
         <li>Quer um "truque" pra manipular mulher ou vencer discussão</li>
-        <li>Quer uma solução mágica sem prática (aqui tem 7 dias de trabalho)</li>
-        <li>Acha que qualquer desconforto é "gatilho" e usa isso como desculpa pra não crescer</li>
+        <li>Quer solução mágica sem prática (aqui tem 7 dias de trabalho)</li>
+        <li>Acha que qualquer desconforto é "gatilho" e usa isso como desculpa</li>
       </ul>
     </section>
 
     <section>
-      <p>Eu poderia cobrar facilmente uns 200, 300 reais por isso.</p>
-      <p>Ou pelo menos o preço de uma consulta minha.</p>
-      <p>É o que vejo outros "gurus de relacionamento" cobrando por aí...</p>
-      <p>(Por uma qualidade inferior ao Manual do Homem de Pelúcia, modéstia à parte...)</p>
-      <p>Mas eu resolvi fazer diferente.</p>
-      <p>Pra você não ter desculpa nenhuma pra mudar de vida.</p>
-      <p>É uma hora de aula prática + um plano de ação pra mudar de vida.</p>
-      <p>Em troca de alguns trocados que você pode ter aí.</p>
-      <p>Menos do que um lanche que você paga naquele encontro que vai levar toco.</p>
-      <p><strong>Por isso, seu investimento vai ser de...</strong></p>
+      <p>Eu poderia cobrar R$200, R$300 por isso.</p>
+      <p>É o que vejo outros "especialistas em relacionamento" cobrando por aí — por conteúdo pior.</p>
+      <p>Mas eu quero que você não tenha desculpa.</p>
+      <p>Uma hora de aula + plano de 7 dias. Em troca de alguns trocados.</p>
     </section>
 
     <section id="comprar">
-      <h2>Preço</h2>
+      <h2>Investimento</h2>
       <div class="preco-section">
         <p class="preco-valor">R$ 47</p>
-        <p class="preco-compare">Menos do que: uma pizza com cerveja, um mês de streaming, e principalmente: menos do que uma cagada emocional que te custa <strong>respeito, paz e tempo</strong>.</p>
+        <p class="preco-compare">Menos que um lanche num encontro que vai dar errado.</p>
         <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="fbq('track', 'AddToCart', {value: 47, currency: 'BRL'});">Quero assumir as rédeas</a>
-        <p class="cta-note">Acesso imediato • 7 dias de garantia</p>
+        <p class="cta-note">Acesso imediato • Garantia de 7 dias</p>
       </div>
     </section>
 
@@ -838,18 +777,6 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
       <div class="faq-item">
         <h4>8) Isso substitui terapia?</h4>
         <p>Não. Isso é um manual tático de autocondução e prática diária. Terapia é outro nível, outra profundidade. Aqui é ferramenta pra vida real.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Quem vai ser teu professor</h2>
-      <div class="professor-card">
-        <p>Eu sou o <strong>Diego Moreira</strong>.</p>
-        <p>Sou <strong>psicólogo</strong>, atendo em clínica há <strong>mais de 5 anos</strong>, e já acompanhei <strong>centenas de homens</strong> no ponto exato onde tudo desanda: quando a vida aperta, quando a emoção sobe, quando a decisão exige peito.</p>
-        <p>Há <strong>2 anos</strong> eu também atuo como <strong>supervisor de psicoterapeutas</strong> — ou seja: além de atender, eu treino outros terapeutas pra enxergarem padrões, não só sintomas. Isso me obrigou a ficar ainda mais preciso: menos teoria bonita, mais ferramenta que funciona na vida real.</p>
-        <p>Além da clínica, eu sou <strong>professor</strong> e <strong>produtor de conteúdo</strong>. Eu pego coisa complexa (psicologia profunda, afetividade, comportamento masculino, hábito, vício, escolha) e traduzo pra um jeito que dá pra entender e aplicar <strong>sem virar papo de autoajuda</strong>.</p>
-        <p>O que você vai receber aqui não é motivação.<br>É <strong>diagnóstico direto + método prático</strong>.</p>
-        <p>Porque homem não precisa de mais uma palestra sobre "seja melhor". Homem precisa de um jeito claro de <strong>assumir as rédeas da própria vida</strong> e pronto.</p>
       </div>
     </section>
 
