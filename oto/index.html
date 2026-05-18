@@ -6,25 +6,14 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Espera — uma proposta exclusiva</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: #f5f5f5;
       color: #1a1a1a;
       line-height: 1.6;
-      padding: 0;
     }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
 
     /* TIMER BAR */
     .timer-bar {
@@ -39,17 +28,12 @@
       top: 0;
       z-index: 100;
     }
-
-    .timer-bar .icon {
-      margin-right: 6px;
-    }
-
+    .timer-bar .icon { margin-right: 6px; }
     .timer-bar #timer {
       font-variant-numeric: tabular-nums;
       font-weight: 700;
     }
 
-    /* MAIN CONTENT */
     .content {
       background: white;
       padding: 40px 32px;
@@ -62,51 +46,79 @@
       font-size: 36px;
       line-height: 1.15;
       font-weight: 800;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       color: #000;
     }
-
+    h1.sub {
+      font-size: 26px;
+      color: #444;
+      font-weight: 700;
+      margin-top: 6px;
+    }
     h2 {
       font-size: 22px;
       line-height: 1.3;
       font-weight: 700;
-      margin: 28px 0 14px;
+      margin: 36px 0 16px;
       color: #000;
     }
-
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 24px 0 8px;
+      color: #000;
+    }
     p {
       font-size: 17px;
       line-height: 1.65;
       margin-bottom: 16px;
       color: #2a2a2a;
     }
+    strong { color: #000; font-weight: 700; }
+    em { font-style: italic; color: #444; }
 
-    strong {
-      color: #000;
-      font-weight: 700;
+    .quote-block {
+      font-style: italic;
+      color: #555;
+      padding: 12px 0 12px 20px;
+      border-left: 3px solid #ccc;
+      margin: 16px 0 24px;
+      font-size: 16px;
     }
 
-    em {
-      font-style: italic;
-      color: #444;
+    .stage-card {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      padding: 18px 22px;
+      margin-bottom: 14px;
+      border-radius: 6px;
+    }
+    .stage-card .stage-title {
+      font-weight: 700;
+      color: #000;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+    .stage-card .stage-desc {
+      font-size: 15px;
+      color: #555;
+      margin: 0;
+      line-height: 1.55;
     }
 
     .highlight-box {
-      background: #f8f6f0;
-      border-left: 4px solid #5C4A2E;
+      background: #fdf4e3;
+      border-left: 4px solid #C8102E;
       padding: 20px 24px;
       margin: 28px 0;
       border-radius: 4px;
     }
-
     .highlight-box p {
       margin-bottom: 8px;
-      font-size: 16px;
+      font-size: 17px;
+      color: #1a1a1a;
     }
-
-    .highlight-box p:last-child {
-      margin-bottom: 0;
-    }
+    .highlight-box p:last-child { margin-bottom: 0; }
 
     /* PRODUCT CARD */
     .product-card {
@@ -116,14 +128,12 @@
       margin: 32px 0;
       border-radius: 8px;
     }
-
     .product-card h2 {
       margin-top: 0;
       font-size: 26px;
       text-align: center;
       margin-bottom: 6px;
     }
-
     .product-card .product-subtitle {
       text-align: center;
       color: #666;
@@ -131,13 +141,11 @@
       margin-bottom: 24px;
       font-size: 15px;
     }
-
     .product-list {
       list-style: none;
       padding: 0;
       margin: 0;
     }
-
     .product-list li {
       padding: 10px 0;
       padding-left: 28px;
@@ -146,11 +154,7 @@
       color: #2a2a2a;
       border-bottom: 1px solid #eee;
     }
-
-    .product-list li:last-child {
-      border-bottom: none;
-    }
-
+    .product-list li:last-child { border-bottom: none; }
     .product-list li::before {
       content: "✓";
       position: absolute;
@@ -169,7 +173,6 @@
       border-radius: 8px;
       text-align: center;
     }
-
     .price-box .pre-price {
       font-size: 14px;
       letter-spacing: 1px;
@@ -177,7 +180,6 @@
       margin-bottom: 12px;
       color: #aaa;
     }
-
     .price-box .old-price {
       font-size: 22px;
       text-decoration: line-through;
@@ -185,7 +187,6 @@
       margin-bottom: 8px;
       display: block;
     }
-
     .price-box .new-price {
       font-size: 48px;
       font-weight: 800;
@@ -193,24 +194,21 @@
       line-height: 1;
       margin-bottom: 6px;
     }
-
     .price-box .new-price small {
       font-size: 24px;
       font-weight: 600;
     }
-
     .price-box .installments {
       font-size: 15px;
       color: #bbb;
       margin-top: 8px;
     }
 
-    /* KIWIFY BUTTON CONTAINER */
+    /* KIWIFY BUTTON */
     .kiwify-button-wrapper {
       margin: 32px 0;
       padding: 24px 0;
     }
-
     .kiwify-button-wrapper #kiwify-upsell-trigger-Ts1LIeZ {
       width: 100%;
       padding: 22px 16px !important;
@@ -219,19 +217,16 @@
       letter-spacing: 0.5px;
       transition: all 0.2s ease;
     }
-
     .kiwify-button-wrapper #kiwify-upsell-trigger-Ts1LIeZ:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(28, 160, 133, 0.3);
     }
-
     .kiwify-button-wrapper #kiwify-upsell-cancel-trigger-Ts1LIeZ {
       margin-top: 18px !important;
       color: #888 !important;
       font-size: 15px !important;
     }
 
-    /* GUARANTEE */
     .guarantee {
       background: #f0f7f0;
       border: 1px solid #c8e0c8;
@@ -240,19 +235,9 @@
       border-radius: 6px;
       text-align: center;
     }
+    .guarantee strong { color: #2a6a2a; font-size: 16px; }
+    .guarantee p { font-size: 15px; margin: 4px 0 0; color: #444; }
 
-    .guarantee strong {
-      color: #2a6a2a;
-      font-size: 16px;
-    }
-
-    .guarantee p {
-      font-size: 15px;
-      margin: 4px 0 0;
-      color: #444;
-    }
-
-    /* FOOTER */
     .footer {
       text-align: center;
       padding: 32px 20px;
@@ -260,34 +245,20 @@
       font-size: 13px;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 600px) {
-      .content {
-        padding: 28px 20px;
-        margin-top: 16px;
-      }
-      h1 {
-        font-size: 28px;
-      }
-      h2 {
-        font-size: 19px;
-      }
-      p {
-        font-size: 16px;
-      }
-      .price-box .new-price {
-        font-size: 40px;
-      }
-      .timer-bar {
-        font-size: 14px;
-        padding: 12px 16px;
-      }
+      .content { padding: 28px 20px; margin-top: 16px; }
+      h1 { font-size: 28px; }
+      h1.sub { font-size: 21px; }
+      h2 { font-size: 19px; }
+      h3 { font-size: 17px; }
+      p { font-size: 16px; }
+      .price-box .new-price { font-size: 40px; }
+      .timer-bar { font-size: 14px; padding: 12px 16px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TIMER BAR (sticky no topo) -->
   <div class="timer-bar">
     <span class="icon">⏱</span> OFERTA EXCLUSIVA — VÁLIDA POR <span id="timer">15:00</span>
   </div>
@@ -297,48 +268,101 @@
 
       <!-- HEADLINE -->
       <h1>Espera.</h1>
-      <h1 style="color:#444; font-size:30px; margin-top:8px;">Antes de você acessar o Rotina sem Neurose, tenho UMA proposta.</h1>
+      <h1 class="sub">Antes de você acessar o Rotina sem Neurose, leia isso até o fim.</h1>
 
-      <!-- DESENVOLVIMENTO DA TESE -->
+      <!-- ABERTURA -->
       <p style="margin-top:28px;">Tu acabou de comprar o tratamento da <strong>acídia</strong>.</p>
+      <p>Mas existe uma camada por baixo que tu ainda não viu.</p>
+      <p>Acídia é o <strong>sintoma de superfície</strong> — é a paralisia que aparece nas tuas terças-feiras difíceis, na lista de domingo que tu não cumpre, na fuga pro celular toda vez que aperta.</p>
+      <p>Mas <strong>por baixo dela</strong> tem uma estrutura mais funda. Uma estrutura que decide TUDO no momento em que a vida exige peito.</p>
 
-      <p>Mas existe uma camada por baixo dela.</p>
+      <h2>Repara nesses cenários:</h2>
 
-      <p>Acídia é o <strong>sintoma de superfície</strong>. Por baixo, tem uma <strong>estrutura afetiva</strong> que sustenta toda a paralisia.</p>
+      <!-- CENÁRIO 1 -->
+      <h3>Cenário 1 — O cara funcional que trava</h3>
+      <p>No trabalho tu funciona. Cumpre, entrega, paga conta. Mas quando aparece uma decisão que exige peito — pedir aumento, assumir um relacionamento, cortar alguém — tu trava.</p>
+      <p>Abre mil abas, faz lista, pede opinião. Passam duas semanas e quem decide é a vida. Tu fica onde tá.</p>
+      <div class="quote-block">"Eu sou um cara capaz… então por que eu não consigo me mexer?"</div>
 
-      <p>Eu chamo essa estrutura de <strong>Homem de Pelúcia</strong>.</p>
+      <!-- CENÁRIO 2 -->
+      <h3>Cenário 2 — O devoto que vira ressentido</h3>
+      <p>Tu faz tudo "certo". Escuta, se adapta, evita conflito. Por dentro, fica esperando: "uma hora ela vai reconhecer."</p>
+      <p>Só que não reconhece. Tu acumula, engole, finge que não liga. Até explodir por uma bobagem — ou sumir do nada.</p>
+      <div class="quote-block">"Eu virei capacho… e ainda saí como o errado."</div>
 
-      <p>É o adulto oco, de mãos macias, que foge do atrito real e vive no "modo provisório". É o cara que nunca escreve a vida a caneta — só a lápis, sempre podendo apagar.</p>
+      <!-- CENÁRIO 3 -->
+      <h3>Cenário 3 — O obsessivo que nunca sustenta</h3>
+      <p>Duas semanas: ela é incrível. Dois meses: perfeita. Três meses: tu nota os "defeitos". Quatro meses: já pensa na próxima.</p>
+      <p>O ciclo se repete: conhece, empolga, frustra, termina. Tu não ama a mulher real — ama a fantasia que criou.</p>
+      <div class="quote-block">"Sempre acaba igual. Não sei o que tem de errado comigo."</div>
 
       <div class="highlight-box">
-        <p><strong>Se tu não tratar essa raiz, qualquer agenda boa colapsa na primeira crise real.</strong></p>
+        <p><strong>Se tu se reconheceu em algum desses, não é azar. É padrão.</strong></p>
+        <p>E esse padrão é a raiz do que te fez procrastinar a vida inteira. Sem tratar ele, qualquer rotina boa colapsa na primeira crise real.</p>
       </div>
 
-      <!-- PRODUTO -->
+      <h2>O nome dessa estrutura</h2>
+      <p>Eu chamo de <strong>Homem de Pelúcia</strong>.</p>
+      <p>É o adulto oco, de mãos macias, que aprendeu a EVITAR desconforto mas nunca aprendeu a SUSTENTAR pressão. É o cara inteligente que vira moleque no momento do aperto — não por falta de cérebro, por falta de condução interna.</p>
+      <p>E quando tu não tem condução interna, tua vida emocional vira sistema automático. Sistema automático escolhe o que alivia mais rápido, não o que é melhor.</p>
+      <p>É por isso que tu trava. Que some. Que se humiliha por migalha. Que anestesia no pornô e no scroll quando deveria estar agindo.</p>
+
+      <h2>Os 4 estágios da masculinidade emocional</h2>
+
+      <div class="stage-card">
+        <div class="stage-title">Estágio 1 — O DEPENDENTE</div>
+        <p class="stage-desc">Não vive sem validação feminina. Aceita migalha pra não ficar sozinho. Usa pornô como anestesia emocional.</p>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-title">Estágio 2 — O OBSESSIVO</div>
+        <p class="stage-desc">Se apaixona rápido, idealiza. Enjoa em 3 meses, ciclo eterno. Ama a fantasia, não a mulher real.</p>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-title">Estágio 3 — O DEVOTO</div>
+        <p class="stage-desc">Faz tudo por ela, espera reconhecimento. Tem medo de cobrar, acumula ressentimento. Explode do nada ou vira escravo.</p>
+      </div>
+
+      <div class="stage-card" style="border-color:#1CA085; background:#f0faf7;">
+        <div class="stage-title" style="color:#1CA085;">Estágio 4 — O INTEGRADO</div>
+        <p class="stage-desc">Ama sem projetar fantasias. Tem força E sensibilidade. Não precisa de validação externa. <strong>Menos de 5% dos homens chegam aqui.</strong></p>
+      </div>
+
+      <p style="margin-top:24px;">A maioria fica presa nos 3 primeiros a vida inteira — a não ser que tu <strong>interrompa o ciclo</strong>.</p>
+
+      <!-- O PRODUTO -->
       <div class="product-card">
         <h2>Manual do Homem de Pelúcia</h2>
-        <p class="product-subtitle">A masterclass que trata a estrutura afetiva por trás da acídia.</p>
+        <p class="product-subtitle">A aula que trata a estrutura por trás da acídia.</p>
 
         <ul class="product-list">
-          <li>Aula completa <strong>Assuma as Rédeas</strong> (54 min)</li>
-          <li>Framework dos <strong>4 Estágios da Masculinidade Emocional</strong> (Dependente, Obsessivo, Devoto, Integrado)</li>
-          <li>Caderno de ativação de 7 dias</li>
-          <li>Exercícios práticos de condução interna</li>
-          <li>Analista (IA) particular pra te ajudar a analisar tua personalidade</li>
+          <li>Aula completa <strong>Assuma as Rédeas</strong> (54 min) — entende por que tu vira moleque na hora do aperto</li>
+          <li>Framework dos <strong>4 Estágios da Masculinidade Emocional</strong> — descobre exatamente em qual tu tá preso</li>
+          <li><strong>Caderno de Ativação de 7 dias</strong> — não é diário fofo, é prática guiada pra interromper o ciclo</li>
+          <li>Roteiros pra parar de mendigar atenção, parar de travar, parar de anestesiar</li>
+          <li>Analista de IA particular pra te ajudar a identificar teu padrão</li>
         </ul>
       </div>
 
+      <p style="margin-top:24px;"><strong>Junto com o Rotina sem Neurose, tu trata a coisa por inteiro:</strong></p>
+      <p style="margin-left:16px; color:#444; font-size:16px;">→ <strong>Rotina</strong> destrava tua execução no plano dos deveres concretos.</p>
+      <p style="margin-left:16px; color:#444; font-size:16px;">→ <strong>MHP</strong> destrava tua estrutura afetiva — o sistema operacional por baixo.</p>
+      <p style="margin-left:16px; color:#444; font-size:16px;">Um sem o outro funciona pela metade.</p>
+
       <!-- PREÇO -->
       <div class="price-box">
-        <div class="pre-price">HOJE, NESSE MOMENTO, POR APENAS:</div>
+        <div class="pre-price">CONDIÇÃO ESPECIAL · APENAS NESSA PÁGINA</div>
         <div class="old-price">R$ 67</div>
         <div class="new-price">R$ <small>47</small></div>
         <div class="installments">à vista no Pix · ou 12x de R$ 4,71</div>
       </div>
 
-      <!-- BOTÃO KIWIFY (1-CLICK UPSELL) -->
+      <p style="text-align:center; color:#666; font-size:15px; font-style:italic;">Menos que um lanche num encontro que vai dar errado.</p>
+
+      <!-- BOTÃO KIWIFY -->
       <div class="kiwify-button-wrapper">
-        <div style="text-align:center" id="kiwify-upsell-Ts1LIeZ" data-upsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado" data-downsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado">
+        <div style="text-align:center" id="kiwify-upsell-Ts1LIeZ" data-upsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado.html" data-downsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado.html">
           <button id="kiwify-upsell-trigger-Ts1LIeZ" style="background-color:#1CA085;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #1CA085;font-size:20px;">SIM, QUERO ADICIONAR POR R$47</button>
           <div id="kiwify-upsell-cancel-trigger-Ts1LIeZ" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, prefiro acessar só o Rotina sem Neurose</div>
         </div>
@@ -346,11 +370,11 @@
 
       <!-- GARANTIA -->
       <div class="guarantee">
-        <strong>🔒 Garantia de 7 dias também válida pro MHP.</strong>
-        <p>Sem perguntas. Sem fricção.</p>
+        <strong>🔒 Garantia de 7 dias incondicional</strong>
+        <p>Sem perguntas. Sem fricção. Se não fizer sentido, devolvemos.</p>
       </div>
 
-    </div><!-- /.content -->
+    </div>
 
     <div class="footer">
       Diego Moreira · Psicólogo Clínico · CRP em vigor<br>
@@ -361,26 +385,20 @@
   <!-- TIMER DECORATIVO -->
   <script>
     (function() {
-      let totalSeconds = 15 * 60; // 15 minutos
+      let totalSeconds = 15 * 60;
       const timerEl = document.getElementById('timer');
-
       function updateTimer() {
         const minutes = Math.floor(totalSeconds / 60);
         const seconds = totalSeconds % 60;
         timerEl.textContent =
           String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
-
-        if (totalSeconds > 0) {
-          totalSeconds--;
-        }
+        if (totalSeconds > 0) totalSeconds--;
       }
-
       updateTimer();
       setInterval(updateTimer, 1000);
     })();
   </script>
 
-  <!-- KIWIFY SCRIPT (carregado por último, antes do </body>) -->
   <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
 
 </body>
