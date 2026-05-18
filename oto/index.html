@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Espera — uma proposta exclusiva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* TIMER BAR */
+    .timer-bar {
+      background: #C8102E;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.3px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .timer-bar .icon {
+      margin-right: 6px;
+    }
+
+    .timer-bar #timer {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      background: white;
+      padding: 40px 32px;
+      margin-top: 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    h1 {
+      font-size: 36px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 24px;
+      color: #000;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 700;
+      margin: 28px 0 14px;
+      color: #000;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.65;
+      margin-bottom: 16px;
+      color: #2a2a2a;
+    }
+
+    strong {
+      color: #000;
+      font-weight: 700;
+    }
+
+    em {
+      font-style: italic;
+      color: #444;
+    }
+
+    .highlight-box {
+      background: #f8f6f0;
+      border-left: 4px solid #5C4A2E;
+      padding: 20px 24px;
+      margin: 28px 0;
+      border-radius: 4px;
+    }
+
+    .highlight-box p {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* PRODUCT CARD */
+    .product-card {
+      background: #fafafa;
+      border: 2px solid #e0e0e0;
+      padding: 28px 24px;
+      margin: 32px 0;
+      border-radius: 8px;
+    }
+
+    .product-card h2 {
+      margin-top: 0;
+      font-size: 26px;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .product-card .product-subtitle {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+
+    .product-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .product-list li {
+      padding: 10px 0;
+      padding-left: 28px;
+      position: relative;
+      font-size: 16px;
+      color: #2a2a2a;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-list li:last-child {
+      border-bottom: none;
+    }
+
+    .product-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1CA085;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    /* PRICE BOX */
+    .price-box {
+      background: #000;
+      color: white;
+      padding: 32px 24px;
+      margin: 32px 0;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .price-box .pre-price {
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      color: #aaa;
+    }
+
+    .price-box .old-price {
+      font-size: 22px;
+      text-decoration: line-through;
+      color: #888;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .price-box .new-price {
+      font-size: 48px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .price-box .new-price small {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .price-box .installments {
+      font-size: 15px;
+      color: #bbb;
+      margin-top: 8px;
+    }
+
+    /* KIWIFY BUTTON CONTAINER */
+    .kiwify-button-wrapper {
+      margin: 32px 0;
+      padding: 24px 0;
+    }
+
+    .kiwify-button-wrapper #kiwify-upsell-trigger-Ts1LIeZ {
+      width: 100%;
+      padding: 22px 16px !important;
+      font-size: 22px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+    }
+
+    .kiwify-button-wrapper #kiwify-upsell-trigger-Ts1LIeZ:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(28, 160, 133, 0.3);
+    }
+
+    .kiwify-button-wrapper #kiwify-upsell-cancel-trigger-Ts1LIeZ {
+      margin-top: 18px !important;
+      color: #888 !important;
+      font-size: 15px !important;
+    }
+
+    /* GUARANTEE */
+    .guarantee {
+      background: #f0f7f0;
+      border: 1px solid #c8e0c8;
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .guarantee strong {
+      color: #2a6a2a;
+      font-size: 16px;
+    }
+
+    .guarantee p {
+      font-size: 15px;
+      margin: 4px 0 0;
+      color: #444;
+    }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 32px 20px;
+      color: #888;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .content {
+        padding: 28px 20px;
+        margin-top: 16px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 19px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .price-box .new-price {
+        font-size: 40px;
+      }
+      .timer-bar {
+        font-size: 14px;
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TIMER BAR (sticky no topo) -->
+  <div class="timer-bar">
+    <span class="icon">⏱</span> OFERTA EXCLUSIVA — VÁLIDA POR <span id="timer">15:00</span>
+  </div>
+
+  <div class="container">
+    <div class="content">
+
+      <!-- HEADLINE -->
+      <h1>Espera.</h1>
+      <h1 style="color:#444; font-size:30px; margin-top:8px;">Antes de você acessar o Rotina sem Neurose, tenho UMA proposta.</h1>
+
+      <!-- DESENVOLVIMENTO DA TESE -->
+      <p style="margin-top:28px;">Tu acabou de comprar o tratamento da <strong>acídia</strong>.</p>
+
+      <p>Mas existe uma camada por baixo dela.</p>
+
+      <p>Acídia é o <strong>sintoma de superfície</strong>. Por baixo, tem uma <strong>estrutura afetiva</strong> que sustenta toda a paralisia.</p>
+
+      <p>Eu chamo essa estrutura de <strong>Homem de Pelúcia</strong>.</p>
+
+      <p>É o adulto oco, de mãos macias, que foge do atrito real e vive no "modo provisório". É o cara que nunca escreve a vida a caneta — só a lápis, sempre podendo apagar.</p>
+
+      <div class="highlight-box">
+        <p><strong>Se tu não tratar essa raiz, qualquer agenda boa colapsa na primeira crise real.</strong></p>
+      </div>
+
+      <!-- PRODUTO -->
+      <div class="product-card">
+        <h2>Manual do Homem de Pelúcia</h2>
+        <p class="product-subtitle">A masterclass que trata a estrutura afetiva por trás da acídia.</p>
+
+        <ul class="product-list">
+          <li>Aula completa <strong>Assuma as Rédeas</strong> (54 min)</li>
+          <li>Framework dos <strong>4 Estágios da Masculinidade Emocional</strong> (Dependente, Obsessivo, Devoto, Integrado)</li>
+          <li>Caderno de ativação de 7 dias</li>
+          <li>Exercícios práticos de condução interna</li>
+          <li>Analista (IA) particular pra te ajudar a analisar tua personalidade</li>
+        </ul>
+      </div>
+
+      <!-- PREÇO -->
+      <div class="price-box">
+        <div class="pre-price">HOJE, NESSE MOMENTO, POR APENAS:</div>
+        <div class="old-price">R$ 67</div>
+        <div class="new-price">R$ <small>47</small></div>
+        <div class="installments">à vista no Pix · ou 12x de R$ 4,71</div>
+      </div>
+
+      <!-- BOTÃO KIWIFY (1-CLICK UPSELL) -->
+      <div class="kiwify-button-wrapper">
+        <div style="text-align:center" id="kiwify-upsell-Ts1LIeZ" data-upsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado" data-downsell-url="https://mhp.odiegomoreira.com.br/oto/obrigado">
+          <button id="kiwify-upsell-trigger-Ts1LIeZ" style="background-color:#1CA085;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #1CA085;font-size:20px;">SIM, QUERO ADICIONAR POR R$47</button>
+          <div id="kiwify-upsell-cancel-trigger-Ts1LIeZ" style="margin-top:1rem;cursor:pointer;font-size:16px;text-decoration:underline;font-family:sans-serif;">Não, prefiro acessar só o Rotina sem Neurose</div>
+        </div>
+      </div>
+
+      <!-- GARANTIA -->
+      <div class="guarantee">
+        <strong>🔒 Garantia de 7 dias também válida pro MHP.</strong>
+        <p>Sem perguntas. Sem fricção.</p>
+      </div>
+
+    </div><!-- /.content -->
+
+    <div class="footer">
+      Diego Moreira · Psicólogo Clínico · CRP em vigor<br>
+      odiegomoreira.com.br
+    </div>
+  </div>
+
+  <!-- TIMER DECORATIVO -->
+  <script>
+    (function() {
+      let totalSeconds = 15 * 60; // 15 minutos
+      const timerEl = document.getElementById('timer');
+
+      function updateTimer() {
+        const minutes = Math.floor(totalSeconds / 60);
+        const seconds = totalSeconds % 60;
+        timerEl.textContent =
+          String(minutes).padStart(2, '0') + ':' + String(seconds).padStart(2, '0');
+
+        if (totalSeconds > 0) {
+          totalSeconds--;
+        }
+      }
+
+      updateTimer();
+      setInterval(updateTimer, 1000);
+    })();
+  </script>
+
+  <!-- KIWIFY SCRIPT (carregado por último, antes do </body>) -->
+  <script src="https://snippets.kiwify.com/upsell/upsell.min.js"></script>
+
+</body>
+</html>
