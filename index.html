@@ -21,794 +21,1408 @@ src="https://www.facebook.com/tr?id=1395509698785511&ev=PageView&noscript=1"
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manual do Homem de Pelúcia — Assuma as rédeas da sua vida</title>
-  <meta name="description" content="Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô quando a vida pesa.">
+  <meta name="description" content="Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de se anestesiar no pornô e no scroll infinito quando a vida pesa.">
   <meta property="og:title" content="Manual do Homem de Pelúcia — Assuma as rédeas da sua vida">
-  <meta property="og:description" content="Descubra qual dos 4 padrões emocionais masculinos você repete inconscientemente.">
+  <meta property="og:description" content="Entenda em 1h o padrão que te trava e transforme isso em prática nos 7 dias seguintes.">
   <meta property="og:type" content="website">
-  <!-- Troque URL_DA_IMAGEM_DE_PREVIEW pela URL absoluta da imagem (ex: https://seusite.com/preview.jpg). Recomendado: 1200x630px -->
-  <meta property="og:image" content="URL_DA_IMAGEM_DE_PREVIEW">
+  <meta property="og:image" content="https://mhp.odiegomoreira.com.br/foto-diego.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@85..125,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf9f7;
-      --text: #1a1a1a;
-      --text-muted: #5c5c5c;
-      --accent: #2e7d32;
-      --accent-hover: #1b5e20;
-      --border: #e8e6e3;
+      --paper: #fbfaf7;
+      --paper-strong: #f1eee8;
+      --ink: #101216;
+      --ink-soft: #272c33;
+      --muted: #5f6670;
+      --line: #e0dbd1;
       --card: #ffffff;
-      --arrow: #2e7d32;
+      --blue: #123e5f;
+      --blue-soft: #e7eff5;
+      --red: #c5162e;
+      --red-dark: #941326;
+      --green: #17664a;
+      --shadow: 0 24px 70px rgba(16, 18, 22, 0.08);
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--text);
-      background: var(--bg);
+      background:
+        radial-gradient(circle at top left, rgba(18, 62, 95, 0.10), transparent 34rem),
+        linear-gradient(180deg, #ffffff 0%, var(--paper) 16rem, var(--paper) 100%);
+      color: var(--ink);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 18px;
+      line-height: 1.68;
+      text-rendering: optimizeLegibility;
     }
 
-    .container {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 0 1.5rem 4rem;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    /* Header */
-    header {
-      padding: 3rem 0 2.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .logo {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: clamp(1.6rem, 4vw, 2rem);
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 1rem;
-    }
-
-    .subheadline {
-      font-size: 1.15rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* Sections */
-    section {
-      padding: 2.5rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    section:last-of-type {
-      border-bottom: none;
-    }
-
-    h2 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
-      color: var(--text);
-    }
-
-    h3 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin: 1.5rem 0 0.5rem;
-      color: var(--text);
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .arrow-list {
-      list-style: none;
-    }
-
-    .arrow-list li {
-      position: relative;
-      padding-left: 1.5rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .arrow-list li::before {
-      content: '↳';
-      position: absolute;
-      left: 0;
-      color: var(--arrow);
-      font-weight: 600;
-    }
-
-    .arrow-inline {
-      display: inline;
-    }
-
-    .arrow-inline::before {
-      content: '↳ ';
-      color: var(--arrow);
-      font-weight: 600;
+    a {
+      color: inherit;
     }
 
     strong {
+      color: var(--ink);
       font-weight: 600;
-      color: var(--text);
     }
 
     em {
-      font-style: italic;
-      color: var(--text-muted);
+      color: var(--ink-soft);
     }
 
-    /* Cenários - cards sutis */
-    .cenario {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem 1.75rem;
-      margin-bottom: 1.5rem;
+    .shell {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .cenario:last-child {
-      margin-bottom: 0;
+    .narrow {
+      width: min(780px, calc(100% - 40px));
+      margin: 0 auto;
     }
 
-    .cenario blockquote {
-      margin: 1rem 0 0;
-      padding: 0.75rem 0 0;
-      border-top: 1px solid var(--border);
-      font-style: italic;
-      color: var(--text-muted);
+    .section {
+      padding: clamp(58px, 9vw, 108px) 0;
+      border-top: 1px solid rgba(224, 219, 209, 0.78);
     }
 
-    /* Estágios */
-    .estagio {
-      margin-bottom: 2rem;
+    .section:first-of-type {
+      border-top: 0;
     }
 
-    .estagio:last-child {
-      margin-bottom: 0;
+    h1,
+    h2,
+    h3,
+    h4,
+    summary {
+      font-family: "Archivo", system-ui, sans-serif;
+      letter-spacing: -0.035em;
     }
 
-    .estagio h3 {
-      font-size: 1.1rem;
-      margin-top: 1.75rem;
+    h1 {
+      font-size: clamp(2.55rem, 12vw, 5.8rem);
+      font-stretch: 105%;
+      font-weight: 800;
+      line-height: 0.94;
+      max-width: 890px;
     }
 
-    .estagio ul {
+    h2 {
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 780;
+      line-height: 0.98;
+      margin-bottom: 26px;
+      max-width: 840px;
+    }
+
+    h3 {
+      font-size: clamp(1.2rem, 3vw, 1.6rem);
+      font-weight: 760;
+      line-height: 1.13;
+    }
+
+    p + p {
+      margin-top: 16px;
+    }
+
+    ul,
+    ol {
       list-style: none;
-      margin: 0.5rem 0 1rem;
     }
 
-    .estagio ul li {
-      padding-left: 1.25rem;
-      position: relative;
-      margin-bottom: 0.4rem;
-    }
-
-    .estagio ul li::before {
-      content: '•';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    /* Benefícios - grid de listas */
-    .beneficios-categoria {
-      margin-bottom: 1.75rem;
-    }
-
-    .beneficios-categoria:last-child {
-      margin-bottom: 0;
-    }
-
-    /* CTA Button */
-    .cta-wrapper {
-      text-align: center;
-      padding: 2rem 0;
+    .lead {
+      color: var(--ink-soft);
+      font-size: clamp(1.08rem, 3vw, 1.32rem);
+      line-height: 1.55;
+      max-width: 790px;
     }
 
     .cta {
-      display: inline-block;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 600;
-      background: var(--accent);
-      color: white !important;
+      align-items: center;
+      background: var(--red);
+      border: 0;
+      border-radius: 999px;
+      box-shadow: 0 16px 30px rgba(197, 22, 46, 0.23);
+      color: #fff;
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 780;
+      justify-content: center;
+      letter-spacing: -0.015em;
+      line-height: 1;
+      min-height: 58px;
+      padding: 0 30px;
       text-decoration: none;
-      padding: 1rem 2.25rem;
-      border-radius: 8px;
-      transition: background 0.2s;
-      border: none;
-      cursor: pointer;
+      transition: background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
     }
 
-    .cta:hover {
-      background: var(--accent-hover);
+    .cta:hover,
+    .cta:focus-visible {
+      background: var(--red-dark);
+      box-shadow: 0 20px 36px rgba(197, 22, 46, 0.28);
+      transform: translateY(-2px);
     }
 
     .cta-note {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 0.75rem;
+      color: var(--muted);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      line-height: 1.35;
+      margin-top: 12px;
     }
 
-    /* Preço */
-    .preco-section {
-      background: linear-gradient(180deg, #f5f3f0 0%, var(--bg) 100%);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem 0;
+    .hero {
+      min-height: 100svh;
+      padding: 34px 0 62px;
+      position: relative;
+    }
+
+    .hero::after {
+      background:
+        linear-gradient(90deg, rgba(18, 62, 95, 0.10) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(18, 62, 95, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      content: "";
+      inset: 0;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.32), transparent 62%);
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .brand-row {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: clamp(52px, 12vw, 118px);
+    }
+
+    .brand-mark {
+      align-items: center;
+      color: var(--ink);
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 760;
+      gap: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .brand-mark::before {
+      background: var(--red);
+      border-radius: 50%;
+      content: "";
+      height: 10px;
+      width: 10px;
+    }
+
+    .hero-badge {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.76rem;
+      font-weight: 650;
+      padding: 8px 14px;
+    }
+
+    .hero-copy {
+      max-width: 930px;
+    }
+
+    .hero-promise {
+      color: var(--ink);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.34rem, 5vw, 2.35rem);
+      font-weight: 760;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+      margin-top: 22px;
+      max-width: 870px;
+    }
+
+    .hero-subhead {
+      color: var(--ink-soft);
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.52;
+      margin-top: 26px;
+      max-width: 760px;
+    }
+
+    .hero .cta {
+      margin-top: 28px;
+    }
+
+    .pattern-box {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      margin: 34px 0 28px;
+      max-width: 690px;
+      padding: clamp(22px, 6vw, 34px);
+    }
+
+    .pattern-box p {
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.08rem, 4vw, 1.55rem);
+      font-weight: 650;
+      letter-spacing: -0.035em;
+      line-height: 1.16;
+    }
+
+    .pattern-box p + p {
+      margin-top: 12px;
+    }
+
+    .recognition {
+      color: var(--blue);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.04rem, 3vw, 1.32rem);
+      font-weight: 740;
+      letter-spacing: -0.025em;
+      margin-top: 28px;
       text-align: center;
     }
 
-    .preco-valor {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--accent);
+    .intro-line {
+      color: var(--ink-soft);
+      font-size: clamp(1.08rem, 3vw, 1.28rem);
+      line-height: 1.5;
+      margin-bottom: 30px;
+      max-width: 760px;
     }
 
-    .preco-compare {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin: 1rem 0 1.5rem;
-      line-height: 1.6;
+    .scenario-grid,
+    .stage-grid,
+    .testimonial-grid,
+    .fit-grid,
+    .choice-grid {
+      display: grid;
+      gap: 18px;
     }
 
-    /* FAQ */
-    .faq-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--border);
+    .scenario-card,
+    .stage-card,
+    .deliverable,
+    .testimonial,
+    .fit-card,
+    .choice-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 18px 56px rgba(16, 18, 22, 0.055);
+      padding: clamp(22px, 6vw, 34px);
     }
 
-    .faq-item:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
-    }
-
-    .faq-item h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .faq-item p {
-      font-size: 0.98rem;
-      margin-bottom: 0;
-    }
-
-    /* Fechamento - dois caminhos */
-    .dois-caminhos {
+    .scenario-card {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
+      gap: 18px;
     }
 
-    .caminho {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
+    .scenario-card p {
+      color: var(--ink-soft);
     }
 
-    .caminho.caminho-2 {
-      border-color: var(--accent);
-      background: rgba(46, 125, 50, 0.04);
-    }
-
-    .caminho h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
-    }
-
-    /* O que você recebe - cards */
-    .entrega-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .entrega-card h4 {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .entrega-card .resultado {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 0.75rem;
+    .quote {
+      border-left: 4px solid var(--blue);
+      color: var(--ink);
       font-style: italic;
+      margin-top: auto;
+      padding: 13px 0 13px 18px;
     }
 
-    /* Garantia box */
-    .garantia-box {
-      background: rgba(46, 125, 50, 0.08);
-      border: 1px solid rgba(46, 125, 50, 0.25);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin: 1rem 0;
+    .bridge-close {
+      color: var(--ink);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.08rem, 3vw, 1.38rem);
+      font-weight: 720;
+      letter-spacing: -0.025em;
+      line-height: 1.28;
+      margin: 34px auto 0;
+      max-width: 760px;
+      text-align: center;
     }
 
-    /* Checklist */
-    .checklist {
-      list-style: none;
+    .anima-lines {
+      background: var(--blue-soft);
+      border: 1px solid rgba(18, 62, 95, 0.16);
+      border-radius: 24px;
+      margin: 30px 0;
+      padding: clamp(22px, 6vw, 32px);
     }
 
-    .checklist li {
-      padding-left: 1.5rem;
+    .anima-lines li {
+      color: var(--ink-soft);
+      line-height: 1.5;
+      padding: 12px 0;
+    }
+
+    .anima-lines li + li {
+      border-top: 1px solid rgba(18, 62, 95, 0.15);
+    }
+
+    .stage-grid {
+      counter-reset: stage;
+      margin-top: 34px;
+    }
+
+    .stage-card {
+      background: #fbfbfa;
+      counter-increment: stage;
+      overflow: hidden;
       position: relative;
-      margin-bottom: 0.5rem;
     }
 
-    .checklist li::before {
-      content: '→';
+    .stage-card::before {
+      color: rgba(18, 62, 95, 0.10);
+      content: counter(stage);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 5.2rem;
+      font-weight: 800;
+      line-height: 1;
       position: absolute;
-      left: 0;
-      color: var(--arrow);
+      right: 18px;
+      top: 10px;
     }
 
-    /* Custo inação */
-    .custo-lista {
-      list-style: none;
-    }
-
-    .custo-lista li {
-      padding-left: 1.5rem;
+    .stage-card h3 {
+      max-width: 80%;
       position: relative;
-      margin-bottom: 0.6rem;
+      z-index: 1;
     }
 
-    .custo-lista li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
-
-    /* O que é - bullet de exclusão */
-    .exclusoes {
-      list-style: none;
-      margin: 1rem 0;
-    }
-
-    .exclusoes li {
-      padding-left: 1.5rem;
+    .stage-card ul {
+      margin-top: 18px;
       position: relative;
-      margin-bottom: 0.4rem;
+      z-index: 1;
     }
 
-    .exclusoes li::before {
-      content: '–';
-      position: absolute;
+    .stage-card li,
+    .clean-list li {
+      color: var(--ink-soft);
+      padding-left: 22px;
+      position: relative;
+    }
+
+    .stage-card li + li,
+    .clean-list li + li {
+      margin-top: 9px;
+    }
+
+    .stage-card li::before,
+    .clean-list li::before {
+      background: var(--blue);
+      border-radius: 50%;
+      content: "";
+      height: 7px;
       left: 0;
-      color: var(--text-muted);
+      position: absolute;
+      top: 0.74em;
+      width: 7px;
     }
 
-    /* Quem criou / autoridade — texto + foto */
-    .autoridade-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.75rem 1.75rem;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    .stage-card .quote {
+      border-color: var(--line);
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .stage-card.is-sofia {
+      background: linear-gradient(135deg, #ffffff 0%, #edf5f1 100%);
+      border-color: rgba(23, 102, 74, 0.28);
+    }
+
+    .stage-card.is-sofia::before {
+      color: rgba(23, 102, 74, 0.16);
+    }
+
+    .stage-card.is-sofia li::before {
+      background: var(--green);
+    }
+
+    .stage-after {
+      margin-top: 34px;
+      text-align: center;
+    }
+
+    .stage-after p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 780px;
+    }
+
+    .cta-row {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .mechanism p {
+      font-size: clamp(1.14rem, 3vw, 1.38rem);
+      line-height: 1.48;
+    }
+
+    .thesis {
+      background: var(--ink);
+      border-radius: 24px;
+      color: #fff;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.35rem, 5vw, 2.2rem);
+      font-weight: 780;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+      margin: 32px 0;
+      padding: clamp(22px, 6vw, 36px);
+    }
+
+    .turn {
+      color: var(--blue);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.45rem, 5vw, 2.4rem);
+      font-weight: 780;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+      margin-top: 34px;
+    }
+
+    .consequence {
+      background:
+        linear-gradient(180deg, rgba(241, 238, 232, 0.72), rgba(241, 238, 232, 0.28)),
+        var(--paper);
+    }
+
+    .consequence .hard-line {
+      color: var(--ink);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.6rem, 5vw, 2.7rem);
+      font-weight: 790;
+      letter-spacing: -0.045em;
+      line-height: 1.04;
+      margin-bottom: 18px;
+    }
+
+    .authority-grid {
       align-items: center;
+      display: grid;
+      gap: clamp(28px, 7vw, 58px);
     }
 
-    @media (min-width: 560px) {
-      .autoridade-card {
-        grid-template-columns: 200px 1fr;
-      }
+    .photo-frame {
+      background: var(--ink);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      padding: 10px;
     }
 
-    .autoridade-foto {
-      text-align: center;
-    }
-
-    .autoridade-foto img {
-      width: 100%;
-      max-width: 200px;
-      max-height: 240px;
-      height: auto;
+    .photo-frame img {
+      aspect-ratio: 5 / 4;
+      border-radius: 22px;
       object-fit: cover;
-      border-radius: 12px;
+      object-position: center 32%;
+      width: 100%;
     }
 
-    @media (max-width: 559px) {
-      .autoridade-foto {
-        order: -1;
-      }
-
-      .autoridade-foto img {
-        max-width: 160px;
-        max-height: 200px;
-        margin: 0 auto;
-        display: block;
-      }
-    }
-
-    .autoridade-texto p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* Depoimentos */
-    .depoimento-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem 1.75rem;
-      margin-bottom: 1rem;
-    }
-
-    .depoimento-card:last-child {
-      margin-bottom: 0;
-    }
-
-    .depoimento-card blockquote {
-      margin: 0 0 0.75rem;
-      font-style: italic;
-      color: var(--text);
-    }
-
-    .depoimento-autor {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem 0 2rem;
+    .social-proof-pill {
+      align-items: center;
+      background: var(--blue-soft);
+      border: 1px solid rgba(18, 62, 95, 0.16);
+      border-radius: 999px;
+      color: var(--blue);
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
       font-size: 0.9rem;
-      color: var(--text-muted);
+      font-weight: 760;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 11px 16px;
     }
 
-    /* Sticky CTA no mobile */
-    .sticky-cta {
-      display: none;
-      position: fixed;
-      bottom: 0;
+    .stars {
+      color: var(--red);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 780;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .testimonial blockquote {
+      color: var(--ink);
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.52;
+    }
+
+    .testimonial cite {
+      color: var(--muted);
+      display: block;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.86rem;
+      font-style: normal;
+      font-weight: 650;
+      margin-top: 18px;
+    }
+
+    .definition-card {
+      background: var(--ink);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      color: #fff;
+      padding: clamp(28px, 7vw, 54px);
+    }
+
+    .definition-card h2,
+    .definition-card strong {
+      color: #fff;
+    }
+
+    .definition-card p {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .product-line {
+      color: #fff;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.55rem, 5vw, 2.7rem);
+      font-weight: 790;
+      letter-spacing: -0.045em;
+      line-height: 1.08;
+      margin: 6px 0 20px;
+    }
+
+    .not-list {
+      display: grid;
+      gap: 10px;
+      margin: 26px 0;
+    }
+
+    .not-list li {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 16px;
+      color: rgba(255, 255, 255, 0.92);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-weight: 700;
+      padding: 13px 16px;
+    }
+
+    .deliverables {
+      counter-reset: deliverable;
+      display: grid;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .deliverable {
+      counter-increment: deliverable;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: auto 1fr;
+    }
+
+    .deliverable::before {
+      align-items: center;
+      background: var(--blue);
+      border-radius: 50%;
+      color: #fff;
+      content: counter(deliverable);
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 780;
+      height: 42px;
+      justify-content: center;
+      width: 42px;
+    }
+
+    .deliverable h3 {
+      margin-top: 4px;
+    }
+
+    .deliverable p {
+      color: var(--ink-soft);
+      margin-top: 10px;
+    }
+
+    .deliverable .result {
+      color: var(--blue);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.98rem;
+      font-weight: 730;
+      letter-spacing: -0.015em;
+    }
+
+    .deliverable.is-featured {
+      background: linear-gradient(135deg, #ffffff 0%, var(--blue-soft) 100%);
+      border-color: rgba(18, 62, 95, 0.25);
+    }
+
+    .tag {
+      background: var(--red);
+      border-radius: 999px;
+      color: #fff;
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 760;
+      letter-spacing: 0.09em;
+      line-height: 1;
+      margin-bottom: 10px;
+      padding: 7px 10px;
+      text-transform: uppercase;
+    }
+
+    .fit-grid {
+      margin-top: 28px;
+    }
+
+    .fit-card h3 {
+      margin-bottom: 18px;
+    }
+
+    .fit-card li {
+      color: var(--ink-soft);
+      padding-left: 34px;
+      position: relative;
+    }
+
+    .fit-card li + li {
+      margin-top: 13px;
+    }
+
+    .fit-card li::before {
+      align-items: center;
+      border-radius: 50%;
+      color: #fff;
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 800;
+      height: 22px;
+      justify-content: center;
       left: 0;
-      right: 0;
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      padding: 1rem 1.5rem;
-      z-index: 100;
-      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      line-height: 1;
+      position: absolute;
+      top: 0.25em;
+      width: 22px;
     }
 
-    @media (max-width: 600px) {
-      .sticky-cta {
-        display: block;
+    .fit-card.is-for li::before {
+      background: var(--green);
+      content: "✓";
+    }
+
+    .fit-card.is-not li::before {
+      background: #767676;
+      content: "×";
+    }
+
+    .price-card {
+      background:
+        radial-gradient(circle at top right, rgba(197, 22, 46, 0.20), transparent 23rem),
+        linear-gradient(145deg, #111419 0%, #050607 100%);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      color: #fff;
+      overflow: hidden;
+      padding: clamp(28px, 8vw, 64px);
+      position: relative;
+    }
+
+    .price-card h2,
+    .price-card strong {
+      color: #fff;
+    }
+
+    .price-card p {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .value-anchor {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+    }
+
+    .reference-price {
+      color: rgba(255, 255, 255, 0.70);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 730;
+      margin-top: 18px;
+    }
+
+    .reference-price span {
+      color: rgba(255, 255, 255, 0.55);
+      margin-right: 10px;
+      text-decoration: line-through;
+    }
+
+    .price-focus {
+      display: grid;
+      gap: 22px;
+    }
+
+    .price {
+      color: #fff;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(5rem, 22vw, 9rem);
+      font-weight: 800;
+      letter-spacing: -0.075em;
+      line-height: 0.9;
+    }
+
+    .price small {
+      font-size: 0.32em;
+      letter-spacing: -0.045em;
+      margin-right: 6px;
+    }
+
+    .price-joke {
+      color: #fff;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.18rem, 4vw, 1.75rem);
+      font-weight: 760;
+      letter-spacing: -0.04em;
+      line-height: 1.08;
+      max-width: 520px;
+    }
+
+    .price-card .cta {
+      margin-top: 4px;
+      width: 100%;
+    }
+
+    .price-card .cta-note {
+      color: rgba(255, 255, 255, 0.72);
+      text-align: center;
+    }
+
+    .guarantee-box {
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 24px;
+      padding: clamp(26px, 7vw, 44px);
+      text-align: center;
+    }
+
+    .seal {
+      align-items: center;
+      background: var(--blue-soft);
+      border: 1px solid rgba(18, 62, 95, 0.18);
+      border-radius: 50%;
+      color: var(--blue);
+      display: inline-flex;
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      height: 96px;
+      justify-content: center;
+      justify-self: center;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      text-align: center;
+      width: 96px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 12px 32px rgba(16, 18, 22, 0.035);
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 730;
+      line-height: 1.25;
+      list-style: none;
+      padding: 20px 22px;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      color: var(--blue);
+      content: "+";
+      font-size: 1.35rem;
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      border-top: 1px solid var(--line);
+      color: var(--ink-soft);
+      padding: 18px 22px 22px;
+    }
+
+    .choice-grid {
+      margin: 32px 0 24px;
+    }
+
+    .choice-card {
+      background: #f4f2ed;
+      color: var(--muted);
+    }
+
+    .choice-card.is-active {
+      background: linear-gradient(135deg, #ffffff 0%, var(--blue-soft) 100%);
+      border-color: rgba(18, 62, 95, 0.26);
+      color: var(--ink);
+    }
+
+    .choice-card h3 {
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .final-prompt {
+      color: var(--ink);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: clamp(1.18rem, 4vw, 1.7rem);
+      font-weight: 770;
+      letter-spacing: -0.04em;
+      line-height: 1.12;
+      text-align: center;
+    }
+
+    footer {
+      padding: 42px 0 54px;
+      text-align: center;
+    }
+
+    footer p {
+      color: var(--muted);
+      font-family: "Archivo", system-ui, sans-serif;
+      font-size: 0.86rem;
+      font-weight: 620;
+      line-height: 1.45;
+    }
+
+    footer .cta {
+      box-shadow: none;
+      margin-top: 20px;
+      min-height: 46px;
+      padding: 0 22px;
+    }
+
+    @media (max-width: 640px) {
+      .brand-row {
+        align-items: flex-start;
+        gap: 18px;
       }
-      body {
-        padding-bottom: 80px;
+
+      .hero-badge {
+        display: none;
       }
-      .cta {
+
+      .hero .cta,
+      .cta-row .cta {
         width: 100%;
-        text-align: center;
+      }
+
+      .deliverable {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 760px) {
+      .scenario-grid,
+      .testimonial-grid,
+      .fit-grid,
+      .choice-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .fit-grid,
+      .choice-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stage-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .authority-grid {
+        grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+      }
+
+      .price-focus {
+        align-items: end;
+        grid-template-columns: 0.9fr 1.1fr;
+      }
+
+      footer {
+        padding-bottom: 54px;
+      }
+    }
+
+    @media (min-width: 1040px) {
+      .stage-grid {
+        grid-template-columns: repeat(4, 1fr);
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="logo">Manual do Homem de Pelúcia</div>
-      <h1>Pare de ser uma cadelinha emocional — e assuma as rédeas da sua vida.</h1>
-      <p class="subheadline">Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de anestesiar no pornô/doomscrooling quando a vida pesa.</p>
-    </header>
-
-    <section>
-      <p>Você não "tem um jeito intenso".</p>
-      <p>Você tem um <strong>padrão</strong>.</p>
-      <p>E ele aparece sempre do mesmo jeito — <strong>na hora que aperta</strong>.</p>
-      <p><strong>Qual desses você reconhece?</strong></p>
-
-      <div class="cenario">
-        <h3>Cenário 1 — O homem funcional que trava</h3>
-        <p>No trabalho você funciona. Cumpre, entrega, paga conta. Mas quando aparece uma decisão que exige peito — pedir aumento, assumir um relacionamento, cortar alguém — você trava.</p>
-        <p>Abre mil abas, faz lista, pede opinião. Passam duas semanas e quem decide é a vida. Você fica onde tá.</p>
-        <blockquote>"Eu sou um cara capaz… então por que eu não consigo me mexer?"</blockquote>
+  <header class="hero">
+    <div class="shell">
+      <div class="brand-row">
+        <div class="brand-mark">Manual do Homem de Pelúcia</div>
+        <div class="hero-badge">Aula de 54 min + plano de 7 dias</div>
       </div>
 
-      <div class="cenario">
-        <h3>Cenário 2 — O devoto que vira ressentido</h3>
-        <p>Você faz tudo "certo". Escuta, se adapta, evita conflito. Por dentro, fica esperando: "Uma hora ela vai reconhecer."</p>
-        <p>Só que não reconhece. Você acumula, engole, finge que não liga. Até explodir por uma bobagem — ou sumir do nada.</p>
-        <blockquote>"Eu virei capacho… e ainda saí como o errado."</blockquote>
-      </div>
+      <div class="hero-copy">
+        <h1>Manual do Homem de Pelúcia</h1>
+        <p class="hero-promise">Pare de ser uma cadelinha emocional — e assuma as rédeas da sua vida.</p>
+        <p class="hero-subhead">Um manual direto e aplicável pra parar de mendigar atenção, parar de sofrer por mulher e parar de se anestesiar no pornô e no scroll infinito quando a vida pesa.</p>
+        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
 
-      <div class="cenario">
-        <h3>Cenário 3 — O obsessivo que nunca sustenta</h3>
-        <p>Duas semanas: ela é incrível. Dois meses: perfeita. Três meses: você nota os "defeitos". Quatro meses: já pensa na próxima.</p>
-        <p>O ciclo se repete: conhece, empolga, frustra, termina. Você não ama a mulher real — ama a fantasia que criou.</p>
-        <blockquote>"Sempre acaba igual. Não sei o que tem de errado comigo."</blockquote>
-      </div>
-    </section>
-
-    <section>
-      <p>Se você se reconheceu, não é azar. <strong>É padrão.</strong></p>
-      <p>E esse padrão tem um mecanismo por trás.</p>
-    </section>
-
-    <section>
-      <h2>Os 4 estágios da masculinidade emocional</h2>
-
-      <div class="estagio">
-        <h3>Estágio 1 — EVA (O Dependente)</h3>
-        <ul>
-          <li>Não vive sem validação feminina</li>
-          <li>Aceita migalha pra não ficar sozinho</li>
-          <li>Usa pornô como anestesia emocional</li>
-        </ul>
-        <p><em>"Eu viro capacho, depois fico com nojo de mim."</em></p>
-      </div>
-
-      <div class="estagio">
-        <h3>Estágio 2 — HELENA (O Obsessivo)</h3>
-        <ul>
-          <li>Se apaixona rápido, idealiza</li>
-          <li>Enjoa em 3 meses, ciclo eterno</li>
-          <li>Ama a fantasia, não a mulher real</li>
-        </ul>
-        <p><em>"Sempre acaba igual. Não sei o que tem de errado comigo."</em></p>
-      </div>
-
-      <div class="estagio">
-        <h3>Estágio 3 — MARIA (O Devoto)</h3>
-        <ul>
-          <li>Faz tudo por ela, espera reconhecimento</li>
-          <li>Tem medo de cobrar, acumula ressentimento</li>
-          <li>Explode do nada ou vira escravo</li>
-        </ul>
-        <p><em>"Faço tudo certo e ainda assim perco."</em></p>
-      </div>
-
-      <div class="estagio">
-        <h3>Estágio 4 — SOFIA (O Integrado)</h3>
-        <ul>
-          <li>Ama sem projetar fantasias</li>
-          <li>Tem força E sensibilidade</li>
-          <li>Não precisa de validação externa</li>
-        </ul>
-        <p><em>"Eu escolhi. Agora eu cultivo."</em></p>
-      </div>
-
-      <p><strong>Menos de 5% dos homens chegam aqui.</strong></p>
-      <p>A maioria fica presa nos 3 primeiros a vida inteira. A não ser que você <strong>interrompa o ciclo</strong>.</p>
-    </section>
-
-    <section>
-      <h2>Por que isso acontece</h2>
-      <p>Você aprendeu a evitar desconforto — não a sustentar pressão.</p>
-      <p>Quando a vida emocional não tem "mão no volante", ela vira sistema automático. E sistema automático escolhe o que alivia mais rápido, não o que é melhor.</p>
-      <p>É por isso que o cara inteligente vira moleque na hora do aperto: não falta cérebro, falta condução interna.</p>
-      <p><strong>E não é culpa sua.</strong> Ninguém te ensinou isso. Seu pai provavelmente não sabia. A escola não ensinou. Você foi jogado no mundo sem o manual.</p>
-      <p>Mas agora existe saída.</p>
-    </section>
-
-    <section>
-      <h2>Se você não mudar</h2>
-      <p>Isso não "passa". Só troca de roupa.</p>
-      <p>Você vai continuar perdendo mulher boa por travar, sumir ou explodir na hora errada. Vai colecionar relações curtas. Vai anestesiar no automático e chamar de "hábito".</p>
-      <p>E vai se acostumar a viver abaixo do que poderia.</p>
-    </section>
-
-    <section>
-      <h2>Quem criou isso</h2>
-      <div class="autoridade-card">
-        <div class="autoridade-foto">
-          <img src="foto-diego.png" alt="Diego Moreira — Psicólogo clínico">
+        <div class="pattern-box">
+          <p>Você não “tem um jeito intenso”.</p>
+          <p>Você tem um <strong>padrão</strong>.</p>
+          <p>E ele aparece sempre do mesmo jeito — <strong>na hora que aperta</strong>.</p>
         </div>
-        <div class="autoridade-texto">
-          <p>Eu sou o <strong>Diego Moreira</strong>.</p>
-          <p>Sou <strong>psicólogo clínico</strong>, atendo há <strong>mais de 5 anos</strong>, e já acompanhei <strong>centenas de homens</strong> no ponto exato onde tudo desanda: quando a vida aperta, quando a emoção sobe, quando a decisão exige peito.</p>
-          <p>Há 2 anos também atuo como <strong>supervisor de psicoterapeutas</strong> — treino outros profissionais pra enxergarem padrões, não só sintomas.</p>
-          <p>O que você vai receber aqui não é motivação. É <strong>diagnóstico direto + método prático</strong>.</p>
+
+        <p class="recognition">Qual desses três você reconhece?</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" aria-labelledby="padrao-title">
+      <div class="shell">
+        <h2 id="padrao-title">Antes de qualquer teoria, três cenas.</h2>
+        <p class="intro-line">Você só precisa de uma pra se reconhecer.</p>
+
+        <div class="scenario-grid">
+          <article class="scenario-card">
+            <h3>Cenário 1 — O homem funcional que trava</h3>
+            <p>No trabalho você funciona. Cumpre, entrega, paga conta. Mas quando aparece uma decisão que exige peito — pedir aumento, assumir um relacionamento, cortar alguém — você trava.</p>
+            <p>Abre mil abas, faz lista, pede opinião. Passam duas semanas e quem decide é a vida. Você fica onde tá.</p>
+            <blockquote class="quote">“Eu sou um cara capaz… então por que eu não consigo me mexer?”</blockquote>
+          </article>
+
+          <article class="scenario-card">
+            <h3>Cenário 2 — O devoto que vira ressentido</h3>
+            <p>Você faz tudo “certo”. Escuta, se adapta, evita conflito. Por dentro, fica esperando: “uma hora ela vai reconhecer.”</p>
+            <p>Só que não reconhece. Você acumula, engole, finge que não liga. Até explodir por uma bobagem — ou sumir do nada.</p>
+            <blockquote class="quote">“Eu virei capacho… e ainda saí como o errado.”</blockquote>
+          </article>
+
+          <article class="scenario-card">
+            <h3>Cenário 3 — O obsessivo que nunca sustenta</h3>
+            <p>Duas semanas: ela é incrível. Dois meses: perfeita. Três meses: você nota os “defeitos”. Quatro meses: já pensa na próxima.</p>
+            <p>O ciclo se repete: conhece, empolga, frustra, termina. Você não ama a mulher real — ama a fantasia que criou.</p>
+            <blockquote class="quote">“Sempre acaba igual. Não sei o que tem de errado comigo.”</blockquote>
+          </article>
         </div>
+
+        <p class="bridge-close">Se você se reconheceu em alguma, não é azar. É padrão. E todo padrão tem um mecanismo por trás.</p>
       </div>
     </section>
 
-    <section>
-      <h2>O que estão dizendo</h2>
-      <div class="depoimento-card">
-        <blockquote>"Eu achava que era só 'meu jeito'. Depois de assistir a aula, percebi que repetia o mesmo padrão há 10 anos. Em 3 semanas já tomei decisões que adiava há meses."</blockquote>
-        <p class="depoimento-autor">— Lucas, 32 anos, desenvolvedor</p>
-      </div>
-      <div class="depoimento-card">
-        <blockquote>"Simples e direto. Sem enrolação. Entendi por que eu sempre explodia nas relações e o que fazer diferente. Pela primeira vez me sinto no controle."</blockquote>
-        <p class="depoimento-autor">— Rafael, 28 anos, analista financeiro</p>
-      </div>
-      <div class="depoimento-card">
-        <blockquote>"Fazia terapia há 2 anos e não tinha entendido o que entendi em 1 hora de aula. O caderno de ativação é o que faltava pra eu aplicar no dia a dia."</blockquote>
-        <p class="depoimento-autor">— Thiago, 35 anos, engenheiro</p>
-      </div>
-    </section>
+    <section class="section" aria-labelledby="anima-title">
+      <div class="shell">
+        <div class="narrow">
+          <h2 id="anima-title">Por que quatro mulheres dão nome a estágios de homem?</h2>
+          <p>Porque o que comanda a sua vida afetiva não é a mulher lá fora.</p>
+          <p>É a imagem de mulher que vive dentro de você.</p>
+          <p>Jung chamou isso de anima — a parte feminina da sua psique. E ela não aparece de um jeito só: tem fases. Cada homem fica preso se relacionando com uma delas — e age a partir dela sem perceber.</p>
 
-    <section>
-      <h2>O que é o Manual do Homem de Pelúcia</h2>
-      <p><strong>Uma aula de 1 hora + um plano de 7 dias.</strong></p>
-      <p>Você identifica seu padrão, entende o mecanismo por trás, e tem um roteiro prático pra interromper o ciclo.</p>
-      <p>Não é terapia. Não é sedução. Não é coach motivacional.</p>
-      <p>É um manual tático pra quando você trava, some, se humilha ou sente que vai fazer cagada.</p>
-      <p><strong>Em menos de uma hora você resolve essas questões.</strong></p>
-    </section>
+          <ul class="anima-lines" aria-label="Os quatro estágios da anima">
+            <li><strong>Eva</strong> é o instinto puro: a mulher como necessidade, como alívio.</li>
+            <li><strong>Helena</strong> é a fantasia: a mulher idealizada — a mesma projeção que fez gregos e troianos guerrearem dez anos por uma imagem.</li>
+            <li><strong>Maria</strong> é a devoção: a mulher como altar, e você como servo.</li>
+            <li><strong>Sofia</strong> é a integração: a mulher real, vista como ela é — e você inteiro diante dela.</li>
+          </ul>
 
-    <section>
-      <h2>O que você recebe</h2>
-
-      <div class="entrega-card">
-        <h4>1. Aula principal (54 min) — "Assuma as rédeas"</h4>
-        <p>Você entende por que um homem inteligente vira moleque na hora do aperto — e aprende o mapa que separa: decisão de fuga, limite de ressentimento, firmeza de agressividade.</p>
-        <p class="resultado"><strong>Resultado:</strong> você reconhece o padrão antes dele te dominar.</p>
-      </div>
-
-      <div class="entrega-card">
-        <h4>2. Caderno de Ativação (7 dias)</h4>
-        <p>Não é diário fofo. É prática guiada. Um roteiro curto pra usar todo dia:</p>
-        <ul class="arrow-list">
-          <li>Parar de mendigar atenção e agir com dignidade</li>
-          <li>Parar de travar e tomar decisões com consistência</li>
-          <li>Parar de anestesiar e segurar a pressão sem fugir</li>
-          <li>Colocar limite sem culpa e sem virar vilão</li>
-        </ul>
-        <p class="resultado"><strong>Resultado:</strong> reação vira hábito. Hábito vira respeito.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Pra quem é / Pra quem não é</h2>
-
-      <p><strong>É pra você que:</strong></p>
-      <ul class="arrow-list">
-        <li>Se pega travando, sumindo ou se humilhando quando a vida aperta</li>
-        <li>Quer virar um cara estável e respeitável (sem teatro e sem virar babaca)</li>
-        <li>Tá cansado de repetir o ciclo: vergonha → anestesia → culpa → repetição</li>
-      </ul>
-
-      <p><strong>Não é pra você que:</strong></p>
-      <ul class="arrow-list">
-        <li>Quer um "truque" pra manipular mulher ou vencer discussão</li>
-        <li>Quer solução mágica sem prática (aqui tem 7 dias de trabalho)</li>
-        <li>Acha que qualquer desconforto é "gatilho" e usa isso como desculpa</li>
-      </ul>
-    </section>
-
-    <section>
-      <p>Eu poderia cobrar R$200, R$300 por isso.</p>
-      <p>É o que vejo outros "especialistas em relacionamento" cobrando por aí — por conteúdo pior.</p>
-      <p>Mas eu quero que você não tenha desculpa.</p>
-      <p>Uma hora de aula + plano de 7 dias. Em troca de alguns trocados.</p>
-    </section>
-
-    <section id="comprar">
-      <h2>Investimento</h2>
-      <div class="preco-section">
-        <p class="preco-valor">R$ 47</p>
-        <p class="preco-compare">Menos que um lanche num encontro que vai dar errado.</p>
-        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="fbq('track', 'AddToCart', {value: 47, currency: 'BRL'});">Quero assumir as rédeas</a>
-        <p class="cta-note">Acesso imediato • Garantia de 7 dias</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Garantia</h2>
-      <div class="garantia-box">
-        <p>Você tem <strong>7 dias</strong> pra assistir, testar e aplicar. Se não fizer sentido pra você, pede reembolso. <strong>Sem perguntas. Sem estresse.</strong></p>
-      </div>
-    </section>
-
-    <section>
-      <h2>FAQ</h2>
-
-      <div class="faq-item">
-        <h4>1) Isso é redpill?</h4>
-        <p>Não. Não tem ódio de mulher, não tem "alfa teatral", não tem guerra dos sexos. É um manual de maturidade e condução interna: parar de agir como menino e virar homem funcional.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>2) Funciona se eu estiver solteiro?</h4>
-        <p>Sim. Talvez até mais. Porque você vai parar de buscar validação, parar de se humilhar e parar de anestesiar — e isso muda tua postura antes mesmo de aparecer alguém.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>3) E se eu estiver num relacionamento?</h4>
-        <p>Funciona mais ainda. Você vai aprender a colocar limite, pedir clareza e não virar ressentido. O objetivo é relacionamento com respeito — não submissão.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>4) Quanto tempo por dia eu preciso?</h4>
-        <p>O plano foi feito pra caber na vida real: 10–15 minutos por dia (e o protocolo de crise é coisa de 3–5 minutos).</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>5) Como eu acesso?</h4>
-        <p>Você compra e recebe acesso imediato na plataforma. Aula + materiais liberados na hora.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>6) Por quanto tempo tenho acesso?</h4>
-        <p>1 ano. Você pode rever quando precisar.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>7) Posso parcelar?</h4>
-        <p>Se a plataforma permitir, sim. Se não, o valor é propositalmente baixo pra ser decisão simples.</p>
-      </div>
-
-      <div class="faq-item">
-        <h4>8) Isso substitui terapia?</h4>
-        <p>Não. Isso é um manual tático de autocondução e prática diária. Terapia é outro nível, outra profundidade. Aqui é ferramenta pra vida real.</p>
-      </div>
-    </section>
-
-    <section>
-      <h2>Sua escolha</h2>
-      <p>A partir de agora, depois de ler tudo até o final, restam só dois caminhos...</p>
-
-      <div class="dois-caminhos">
-        <div class="caminho">
-          <h4>1) Continuar repetindo.</h4>
-          <p>Travando onde importa. Sumindo quando aperta. Se humilhando por migalha. Anestesiando no pornô/scroll e fingindo que "tá tudo sob controle". Segue vivendo fofo.</p>
+          <p>Os três primeiros estágios projetam pra fora e correm atrás. O quarto integra por dentro e escolhe.</p>
+          <p><strong>Veja em qual você está hoje:</strong></p>
         </div>
-        <div class="caminho caminho-2">
-          <h4>2) Pegar o mapa e aplicar.</h4>
-          <p>Uma aula direta + 7 dias de prática. E você começa a fazer o que <strong>homem adulto</strong> faz: segura a pressão, decide e sustenta. Por fim, deixa de ser um <strong>Homem de Pelúcia</strong>.</p>
+
+        <div class="stage-grid">
+          <article class="stage-card">
+            <h3>Estágio 1 — EVA · O Dependente</h3>
+            <ul>
+              <li>Não vive sem validação feminina</li>
+              <li>Aceita migalha pra não ficar sozinho</li>
+              <li>Usa pornô como anestesia emocional</li>
+            </ul>
+            <blockquote class="quote">“Eu viro capacho, depois fico com nojo de mim.”</blockquote>
+          </article>
+
+          <article class="stage-card">
+            <h3>Estágio 2 — HELENA · O Obsessivo</h3>
+            <ul>
+              <li>Se apaixona rápido, idealiza</li>
+              <li>Enjoa em três meses, ciclo eterno</li>
+              <li>Ama a fantasia, não a mulher real</li>
+            </ul>
+            <blockquote class="quote">“Sempre acaba igual. Não sei o que tem de errado comigo.”</blockquote>
+          </article>
+
+          <article class="stage-card">
+            <h3>Estágio 3 — MARIA · O Devoto</h3>
+            <ul>
+              <li>Faz tudo por ela, espera reconhecimento</li>
+              <li>Tem medo de cobrar, acumula ressentimento</li>
+              <li>Explode do nada ou vira escravo</li>
+            </ul>
+            <blockquote class="quote">“Faço tudo certo e ainda assim perco.”</blockquote>
+          </article>
+
+          <article class="stage-card is-sofia">
+            <h3>Estágio 4 — SOFIA · O Integrado</h3>
+            <ul>
+              <li>Ama sem projetar fantasias</li>
+              <li>Tem força e sensibilidade</li>
+              <li>Não precisa de validação externa</li>
+            </ul>
+            <blockquote class="quote">“Eu escolhi. Agora eu cultivo.”</blockquote>
+          </article>
+        </div>
+
+        <div class="stage-after">
+          <p><strong>Menos de 5% dos homens chegam ao quarto estágio.</strong></p>
+          <p>A maioria passa a vida inteira presa nos três primeiros — repetindo, sem nunca ver o mecanismo. A não ser que alguém interrompa o ciclo. Que é exatamente o que esse material faz.</p>
+          <div class="cta-row">
+            <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <p>Se você quer o caminho 2:</p>
-      <div class="cta-wrapper">
-        <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="fbq('track', 'AddToCart', {value: 47, currency: 'BRL'});">Quero assumir as rédeas</a>
-        <p class="cta-note">Acesso imediato • Garantia incondicional de 7 dias</p>
+    <section class="section mechanism" aria-labelledby="mecanismo-title">
+      <div class="narrow">
+        <h2 id="mecanismo-title">Por que isso acontece</h2>
+        <p>Você aprendeu a evitar desconforto — não a sustentar pressão.</p>
+        <p>Quando a vida emocional não tem mão no volante, ela vira sistema automático. E sistema automático escolhe o que alivia mais rápido, não o que é melhor.</p>
+        <div class="thesis">Não falta cérebro. Falta condução interna.</div>
+        <p>E não é culpa sua. Ninguém te ensinou isso. Teu pai provavelmente não sabia. A escola não ensinou. Você foi jogado no mundo sem o manual.</p>
+        <p class="turn">Mas agora existe saída.</p>
       </div>
     </section>
 
-    <footer>
-      <p>Manual do Homem de Pelúcia — Todos os direitos reservados</p>
-    </footer>
-  </div>
+    <section class="section consequence" aria-labelledby="custo-title">
+      <div class="narrow">
+        <h2 id="custo-title">Se você não mudar</h2>
+        <p class="hard-line">Isso não passa. Só troca de roupa.</p>
+        <p>Você vai continuar perdendo mulher boa por travar, sumir ou explodir na hora errada. Vai colecionar relações curtas. Vai se anestesiar no automático e chamar isso de “hábito”.</p>
+        <p>E vai se acostumar a viver abaixo do que poderia — o que talvez seja o pior dos cenários, porque não dói o suficiente pra você reagir.</p>
+      </div>
+    </section>
 
-  <div class="sticky-cta">
-    <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="fbq('track', 'AddToCart', {value: 47, currency: 'BRL'});">Quero assumir as rédeas</a>
-  </div>
+    <section class="section" aria-labelledby="diego-title">
+      <div class="shell authority-grid">
+        <div class="photo-frame">
+          <img src="foto-diego.png" width="1000" height="680" loading="lazy" alt="Diego Moreira, psicólogo clínico">
+        </div>
+        <div>
+          <h2 id="diego-title">Eu sou o Diego Moreira.</h2>
+          <p>Sou psicólogo clínico, atendo há mais de 5 anos, e já acompanhei centenas de homens no ponto exato onde tudo desanda: quando a vida aperta, quando a emoção sobe, quando a decisão exige peito.</p>
+          <p>Há 2 anos também atuo como supervisor de psicoterapeutas — treino outros profissionais pra enxergarem padrões, não só sintomas.</p>
+          <p>E não falo pra plateia vazia: somos mais de 20 mil homens no Instagram e no YouTube, onde eu publico todo dia sobre exatamente isso.</p>
+          <p><strong>O que você vai receber aqui não é motivação. É diagnóstico direto + método prático.</strong></p>
+          <div class="social-proof-pill">Instagram + YouTube · mais de 20 mil homens</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="depoimentos-title">
+      <div class="shell">
+        <h2 id="depoimentos-title">O que estão dizendo</h2>
+        <div class="testimonial-grid">
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Eu achava que era só ‘meu jeito’. Depois da aula, percebi que repetia o mesmo padrão há 10 anos. Em 3 semanas já tomei decisões que adiava há meses.”</blockquote>
+            <cite>— Lucas, 32 anos, desenvolvedor</cite>
+          </figure>
+
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Simples e direto, sem enrolação. Entendi por que eu sempre explodia nas relações e o que fazer diferente. Pela primeira vez me sinto no controle.”</blockquote>
+            <cite>— Rafael, 28 anos, analista financeiro</cite>
+          </figure>
+
+          <figure class="testimonial">
+            <div class="stars" aria-label="5 estrelas">★★★★★</div>
+            <blockquote>“Fazia terapia há 2 anos e não tinha entendido o que entendi em 1 hora de aula. O caderno de ativação é o que faltava pra eu aplicar no dia a dia.”</blockquote>
+            <cite>— Thiago, 35 anos, engenheiro</cite>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="manual-title">
+      <div class="shell">
+        <div class="definition-card">
+          <h2 id="manual-title">O que é o Manual do Homem de Pelúcia</h2>
+          <p class="product-line">Uma aula de 54 minutos + um plano de 7 dias.</p>
+          <p>Em menos de uma hora você entende qual é o teu padrão e como ele funciona por dentro. Os 7 dias seguintes são onde isso vira hábito — reação vira escolha, e escolha vira respeito.</p>
+          <ul class="not-list" aria-label="O que o Manual não é">
+            <li>Não é terapia.</li>
+            <li>Não é sedução.</li>
+            <li>Não é coach motivacional.</li>
+          </ul>
+          <p><strong>É um manual tático pra quando você trava, some, se humilha ou sente que vai fazer cagada.</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="recebe-title">
+      <div class="shell">
+        <h2 id="recebe-title">O que você recebe</h2>
+
+        <div class="deliverables">
+          <article class="deliverable">
+            <div>
+              <h3>Aula principal — “Assuma as Rédeas” (54 min)</h3>
+              <p>Você entende por que um homem inteligente vira moleque na hora do aperto — e aprende o mapa que separa três coisas que parecem iguais e não são: decisão de fuga, limite de ressentimento e firmeza de agressividade.</p>
+              <p class="result">Resultado: você reconhece o padrão antes dele te dominar.</p>
+            </div>
+          </article>
+
+          <article class="deliverable">
+            <div>
+              <h3>O Mapa dos 4 Estágios da Masculinidade Emocional</h3>
+              <p>O diagnóstico completo de Eva, Helena, Maria e Sofia — pra você identificar exatamente onde está e o que caracteriza o próximo passo.</p>
+              <p class="result">Resultado: você para de se achar “um caso perdido” e passa a ver um caminho.</p>
+            </div>
+          </article>
+
+          <article class="deliverable">
+            <div>
+              <h3>Caderno de Ativação (7 dias)</h3>
+              <p>Não é diário fofo. É prática guiada — um roteiro curto pra usar todo dia:</p>
+              <ul class="clean-list">
+                <li>Parar de mendigar atenção e agir com dignidade</li>
+                <li>Parar de travar e decidir com consistência</li>
+                <li>Parar de se anestesiar e sustentar a pressão sem fugir</li>
+                <li>Colocar limite sem culpa e sem virar vilão</li>
+              </ul>
+              <p class="result">Resultado: reação vira hábito. Hábito vira respeito.</p>
+            </div>
+          </article>
+
+          <article class="deliverable">
+            <div>
+              <h3>Exercícios práticos de condução interna</h3>
+              <p>As ferramentas que você aplica no calor do momento — naquela conversa que travou, na decisão que você tá adiando, na reação que você não entendeu.</p>
+            </div>
+          </article>
+
+          <article class="deliverable is-featured">
+            <div>
+              <span class="tag">Exclusivo</span>
+              <h3>Seu analista particular (IA)</h3>
+              <p>Um analista de inteligência artificial treinado no método, disponível quando você precisar.</p>
+              <p>Ele te ajuda a identificar teu estágio, entender teus padrões e analisar situações reais da tua vida — sem você depender de ninguém e sem precisar expor tua história.</p>
+              <p>Não é terapia e não substitui terapia. É uma ferramenta pra aplicar o método no teu caso específico, no teu ritmo.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="cta-row">
+          <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="para-quem-title">
+      <div class="shell">
+        <h2 id="para-quem-title">Pra quem é (e pra quem não é)</h2>
+
+        <div class="fit-grid">
+          <article class="fit-card is-for">
+            <h3>É pra você que:</h3>
+            <ul>
+              <li>Se pega travando, sumindo ou se humilhando quando a vida aperta</li>
+              <li>Quer virar um cara estável e respeitável — sem teatro e sem virar babaca</li>
+              <li>Está cansado de repetir o ciclo: vergonha → anestesia → culpa → repetição</li>
+            </ul>
+          </article>
+
+          <article class="fit-card is-not">
+            <h3>Não é pra você que:</h3>
+            <ul>
+              <li>Quer um “truque” pra manipular mulher ou vencer discussão</li>
+              <li>Quer solução mágica sem prática (aqui tem 7 dias de trabalho)</li>
+              <li>Acha que todo desconforto é “gatilho” e usa isso de desculpa</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="comprar" aria-labelledby="valor-title">
+      <div class="shell">
+        <div class="price-card">
+          <div class="value-anchor">
+            <h2 id="valor-title">Quanto vale assumir as rédeas</h2>
+            <p>Soma o que tem aqui dentro: a aula que reorganiza como você enxerga teu padrão, o mapa dos quatro estágios, o caderno de 7 dias, os exercícios de condução interna e um analista particular pra te acompanhar.</p>
+            <p>Uma única sessão de terapia, no Brasil, custa entre R$150 e R$300 — e trabalha um pedaço de uma questão.</p>
+            <p>Eu poderia cobrar R$297 por tudo isso, e ainda seria barato perto do que muito “especialista em relacionamento” cobra por conteúdo pior.</p>
+            <p>Mas eu não quero te dar desculpa pra continuar travado.</p>
+            <p class="reference-price" aria-label="Valor de referência R$297"><span>R$297</span></p>
+          </div>
+
+          <div class="price-focus">
+            <div>
+              <p>Por isso o valor é esse:</p>
+              <div class="price"><small>R$</small>47</div>
+              <p class="price-joke">Menos que um lanche num encontro que vai dar errado.</p>
+            </div>
+            <div>
+              <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
+              <p class="cta-note">Acesso imediato · Garantia de 7 dias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="garantia-title">
+      <div class="narrow">
+        <div class="guarantee-box">
+          <div class="seal">7<br>dias</div>
+          <div>
+            <h2 id="garantia-title">Risco zero</h2>
+            <p>Você tem 7 dias pra assistir, testar e aplicar.</p>
+            <p>Se não fizer sentido pra você, pede reembolso. Sem perguntas, sem estresse.</p>
+            <p><strong>O risco é todo meu — não seu.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="faq-title">
+      <div class="narrow">
+        <h2 id="faq-title">Perguntas que todo mundo faz</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>1. Isso é redpill?</summary>
+            <p>Não. Sem ódio de mulher, sem “alfa teatral”, sem guerra dos sexos. É um manual de maturidade e condução interna: parar de agir como menino e virar homem funcional.</p>
+          </details>
+
+          <details>
+            <summary>2. Funciona se eu estiver solteiro?</summary>
+            <p>Sim — talvez até mais. Porque você vai parar de buscar validação, parar de se humilhar e parar de se anestesiar. E isso muda tua postura antes mesmo de aparecer alguém.</p>
+          </details>
+
+          <details>
+            <summary>3. E se eu estiver num relacionamento?</summary>
+            <p>Funciona mais ainda. Você vai aprender a colocar limite, pedir clareza e não virar ressentido. O objetivo é relacionamento com respeito — não submissão.</p>
+          </details>
+
+          <details>
+            <summary>4. Quanto tempo por dia eu preciso?</summary>
+            <p>O plano foi feito pra caber na vida real: 10 a 15 minutos por dia. O protocolo de crise é coisa de 3 a 5 minutos.</p>
+          </details>
+
+          <details>
+            <summary>5. Como eu acesso?</summary>
+            <p>Você compra e recebe acesso imediato na plataforma. Aula e materiais liberados na hora.</p>
+          </details>
+
+          <details>
+            <summary>6. Por quanto tempo tenho acesso?</summary>
+            <p>1 ano. Você pode rever quando precisar.</p>
+          </details>
+
+          <details>
+            <summary>7. Isso substitui terapia?</summary>
+            <p>Não. Terapia é outro nível, outra profundidade. Isso aqui é um manual tático de autocondução e prática diária — ferramenta pra vida real. Muitos alunos usam como primeiro passo antes da terapia, ou como complemento.</p>
+          </details>
+
+          <details>
+            <summary>8. Preciso expor minha vida ou falar com alguém?</summary>
+            <p>Não. O material é totalmente individual. Você aplica o protocolo sozinho, no teu ritmo, sem precisar compartilhar tua história com ninguém.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="escolha-title">
+      <div class="shell">
+        <h2 id="escolha-title">No fim, sobram dois caminhos</h2>
+
+        <div class="choice-grid">
+          <article class="choice-card">
+            <h3>1. Continuar repetindo.</h3>
+            <p>Travando onde importa. Sumindo quando aperta. Se humilhando por migalha. Se anestesiando no pornô e no scroll, fingindo que “tá tudo sob controle”. Seguir vivendo de pelúcia.</p>
+          </article>
+
+          <article class="choice-card is-active">
+            <h3>2. Pegar o mapa e aplicar.</h3>
+            <p>Uma aula direta + 7 dias de prática. E você começa a fazer o que homem adulto faz: segura a pressão, decide e sustenta. E deixa de ser um Homem de Pelúcia.</p>
+          </article>
+        </div>
+
+        <p class="final-prompt">Se você quer o caminho 2:</p>
+        <div class="cta-row">
+          <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
+          <p class="cta-note">Acesso imediato · Garantia incondicional de 7 dias</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <p>Manual do Homem de Pelúcia — Diego Moreira · Todos os direitos reservados.</p>
+      <p>Contato: <a href="mailto:diegopm07@gmail.com">diegopm07@gmail.com</a></p>
+      <a href="https://pay.kiwify.com.br/Ts1LIeZ" class="cta" onclick="trackCheckout()">Quero assumir as rédeas</a>
+    </div>
+  </footer>
+
+  <script>
+    function trackCheckout() {
+      if (window.fbq) {
+        fbq('track', 'AddToCart', { value: 47, currency: 'BRL' });
+      }
+    }
+  </script>
 </body>
 </html>
